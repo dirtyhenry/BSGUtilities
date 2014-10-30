@@ -33,6 +33,7 @@
         formatter.dateStyle = NSDateFormatterMediumStyle;
         formatter.timeStyle = NSDateFormatterMediumStyle;
         formatter.dateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'";
+        formatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
         NSDate *result = [formatter dateFromString:stringObject];
 
         if (result == nil) {
