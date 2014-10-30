@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006E0CC01A0295F200CDC293 /* NSDictionary+BSGJSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 006E0CBF1A0295F200CDC293 /* NSDictionary+BSGJSONUtils.m */; };
 		0418B648F87DADF7AA5ED6F7 /* libPods-BSGUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90F3196716B65729149D165 /* libPods-BSGUtilities.a */; };
 		08AEA418FE6360F0E72949BE /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB2296017F96827165DEAA4 /* libPods-Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		006E0CBE1A0295F200CDC293 /* NSDictionary+BSGJSONUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSGJSONUtils.h"; path = "../Pod/Classes/NSDictionary+BSGJSONUtils.h"; sourceTree = "<group>"; };
-		006E0CBF1A0295F200CDC293 /* NSDictionary+BSGJSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BSGJSONUtils.m"; path = "../Pod/Classes/NSDictionary+BSGJSONUtils.m"; sourceTree = "<group>"; };
 		0946B45E4123FC39C476894F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		180B0243A4DB7CE8E2CFAED8 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D460741352F846F30F35B96 /* Pods-BSGUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSGUtilities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,19 +95,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		006E0CBD1A0295C800CDC293 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				006E0CBE1A0295F200CDC293 /* NSDictionary+BSGJSONUtils.h */,
-				006E0CBF1A0295F200CDC293 /* NSDictionary+BSGJSONUtils.m */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				006E0CBD1A0295C800CDC293 /* Pod */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* BSGUtilities */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -377,7 +364,6 @@
 				6003F59E195388D20070C39A /* BSGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BSGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				006E0CC01A0295F200CDC293 /* NSDictionary+BSGJSONUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
