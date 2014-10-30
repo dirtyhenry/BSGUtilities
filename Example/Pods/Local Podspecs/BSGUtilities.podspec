@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Bootstragram iOS Utilities Pod"
   s.description      = <<-DESC
                        Bootstragram iOS Utilities Pod
@@ -27,12 +27,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'BSGUtilities' => ['Pod/Assets/*.png']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MMMarkdown', '~> 0.3'
 end

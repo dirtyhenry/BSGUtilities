@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
 [![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
 
+## Reminders
+
+Validate the pod:
+
+    pod lib lint # from the root
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

@@ -9,7 +9,7 @@
 // BSGUtilities
 #define COCOAPODS_POD_AVAILABLE_BSGUtilities
 #define COCOAPODS_VERSION_MAJOR_BSGUtilities 0
-#define COCOAPODS_VERSION_MINOR_BSGUtilities 1
+#define COCOAPODS_VERSION_MINOR_BSGUtilities 2
 #define COCOAPODS_VERSION_PATCH_BSGUtilities 0
 
 // Expecta
@@ -29,6 +29,12 @@
 #define COCOAPODS_VERSION_MAJOR_FBSnapshotTestCase 1
 #define COCOAPODS_VERSION_MINOR_FBSnapshotTestCase 3
 #define COCOAPODS_VERSION_PATCH_FBSnapshotTestCase 0
+
+// MMMarkdown
+#define COCOAPODS_POD_AVAILABLE_MMMarkdown
+#define COCOAPODS_VERSION_MAJOR_MMMarkdown 0
+#define COCOAPODS_VERSION_MINOR_MMMarkdown 3
+#define COCOAPODS_VERSION_PATCH_MMMarkdown 0
 
 // Specta
 #define COCOAPODS_POD_AVAILABLE_Specta
