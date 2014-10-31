@@ -22,12 +22,44 @@
  */
 @interface BSGWebViewController : UIViewController<UIWebViewDelegate>
 
+/**
+ *  Raw Markdown content. 
+ *
+ *  If this property is set, then `urlString` will be ignored.
+ */
 @property (copy, nonatomic) NSString *rawMarkdownContent;
+
+/**
+ *  A URL string to load in the web view.
+ *
+ *  This property will be ignored unless `rawMarkdownContent` is `nil`.
+ */
 @property (copy, nonatomic) NSString *urlString;
+
+/**
+ *  The web view where the content should be displayed.
+ */
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+/**
+ *  A close button with the following behavior: 
+ *
+ *  - It calls `dismiss:` when actioned.
+ *  - Its label is set to `NSLocalizedString(@"Close", nil)`
+ */
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
+/**
+ *  *Buggy behavior*, should not be used. `UIWebView` doesn't seem KVO-compliant.
+ *  You should use `BSGWebViewDelegate`'s spinner instead.
+ */
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
+/**
+ *  Calls `dismissViewControllerAnimated` on the receiver.
+ *
+ *  @param sender the responsible sender.
+ */
 - (IBAction)dismiss:(id)sender;
 
 @end

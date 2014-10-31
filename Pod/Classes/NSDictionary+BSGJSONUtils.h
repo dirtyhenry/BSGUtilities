@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  A collection of extra NSDictionary getters.
+ */
 @interface NSDictionary (BSGJSONUtils)
 
 

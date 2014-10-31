@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C7245B1A03DA6200145ECC /* SampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00C724591A03DA6200145ECC /* SampleModel.xcdatamodeld */; };
+		00C7245D1A03DCA100145ECC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C7245C1A03DCA100145ECC /* CoreData.framework */; };
+		00C724601A03E4D200145ECC /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = 00C7245E1A03E30400145ECC /* sample.md */; };
 		0418B648F87DADF7AA5ED6F7 /* libPods-BSGUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90F3196716B65729149D165 /* libPods-BSGUtilities.a */; };
 		08AEA418FE6360F0E72949BE /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB2296017F96827165DEAA4 /* libPods-Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C7245A1A03DA6200145ECC /* SampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleModel.xcdatamodel; sourceTree = "<group>"; };
+		00C7245C1A03DCA100145ECC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		00C7245E1A03E30400145ECC /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
 		0946B45E4123FC39C476894F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		180B0243A4DB7CE8E2CFAED8 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D460741352F846F30F35B96 /* Pods-BSGUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSGUtilities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C7245D1A03DCA100145ECC /* CoreData.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -119,6 +126,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00C7245C1A03DCA100145ECC /* CoreData.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -138,6 +146,7 @@
 				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
 				6003F5A5195388D20070C39A /* BSGViewController.h */,
 				6003F5A6195388D20070C39A /* BSGViewController.m */,
+				00C724591A03DA6200145ECC /* SampleModel.xcdatamodeld */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -147,6 +156,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00C7245E1A03E30400145ECC /* sample.md */,
 				6003F595195388D20070C39A /* BSGUtilities-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -276,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C724601A03E4D200145ECC /* sample.md in Resources */,
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
@@ -364,6 +375,7 @@
 				6003F59E195388D20070C39A /* BSGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BSGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				00C7245B1A03DA6200145ECC /* SampleModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +606,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		00C724591A03DA6200145ECC /* SampleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				00C7245A1A03DA6200145ECC /* SampleModel.xcdatamodel */,
+			);
+			currentVersion = 00C7245A1A03DA6200145ECC /* SampleModel.xcdatamodel */;
+			path = SampleModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6003F582195388D10070C39A /* Project object */;
 }
