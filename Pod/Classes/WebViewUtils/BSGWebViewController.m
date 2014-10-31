@@ -50,7 +50,7 @@
     if (self.rawMarkdownContent) {
         NSError *error = nil;
         NSURL *bundleBaseURL = [[NSBundle mainBundle] resourceURL];
-        [self.webView loadHTMLString:[NSString stringWithFormat:@"<html><head><style>body { font-family: 'Helvetica Neue', sans-serif; font-size: 0.8em; text-align: justify; font-style: italic; } h2 { font-size: 1.2em; } img { max-width: 100%%; }</style></head><body>%@</body></html>", [MMMarkdown HTMLStringWithMarkdown:self.rawMarkdownContent error:&error]] baseURL:bundleBaseURL];
+        [self.webView loadHTMLString:[NSString stringWithFormat:@"<html><body>%@</body></html>", [MMMarkdown HTMLStringWithMarkdown:self.rawMarkdownContent error:&error]] baseURL:bundleBaseURL];
         if (error) {
             NSLog(@"MMMarkdown Error: %@", error);
         }
