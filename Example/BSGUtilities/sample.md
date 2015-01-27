@@ -33,8 +33,7 @@ syntax is the format of plain text email.
 
 The best way to get a feel for Markdown's formatting syntax is simply
 to look at a Markdown-formatted document. For example, you can view
-the Markdown source for the article text on this page here:
-<http://daringfireball.net/projects/markdown/index.text>
+the Markdown source for the article text on this page [here](http://daringfireball.net/projects/markdown/index.text).
 
 (You can use this '.text' suffix trick to view the Markdown source for
 the content of each of the pages in this section, e.g. the
@@ -87,9 +86,7 @@ this:
 (mt home)/plugins/Markdown.pl
 
 2.  Once installed, Markdown will appear as an option in Movable Type's
-Text Formatting pop-up menu. This is selectable on a per-post basis:
-
-![Screenshot of Movable Type 'Text Formatting' Menu][tfmenu]
+Text Formatting pop-up menu. This is selectable on a per-post basis.
 
 Markdown translates your posts to HTML when you publish; the posts
 themselves are stored in your MT database in Markdown format.
@@ -229,5 +226,3 @@ also deserve thanks for their feedback.
 [Jason Perkins]:		http://pressedpants.com/
 [Michel Fortin]:		http://www.michelf.com/projects/php-markdown/
 [html2text]:          http://www.aaronsw.com/2002/html2text/
-
-[tfmenu]: /graphics/markdown/mt_textformat_menu.png

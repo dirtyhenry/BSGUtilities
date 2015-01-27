@@ -26,7 +26,11 @@
     self.webViewDelegate.spinner = self.spinner;
     self.webView.delegate = self.webViewDelegate;
 
-    [self.closeButton setTitle:NSLocalizedString(@"Close", nil) forState:UIControlStateNormal];
+    // Configure the close Button
+    if (self.closeButton) {
+        [self.closeButton setTitle:NSLocalizedString(@"Close", nil) forState:UIControlStateNormal];
+        [self.closeButton addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
+    }
 }
 
 
@@ -50,9 +54,20 @@
     if (self.rawMarkdownContent) {
         NSError *error = nil;
         NSURL *bundleBaseURL = [[NSBundle mainBundle] resourceURL];
-        [self.webView loadHTMLString:[NSString stringWithFormat:@"<html><body>%@</body></html>", [MMMarkdown HTMLStringWithMarkdown:self.rawMarkdownContent error:&error]] baseURL:bundleBaseURL];
-        if (error) {
-            NSLog(@"MMMarkdown Error: %@", error);
+        NSString *htmlTemplatePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+        if (!htmlTemplatePath) {
+            NSLog(@"HTML Error: couldn't find HTML template");
+        }
+        NSString *htmlTemplate = [NSString stringWithContentsOfFile:htmlTemplatePath encoding:NSUTF8StringEncoding error:&error];
+        if (htmlTemplate) {
+            [self.webView loadHTMLString:[NSString stringWithFormat:htmlTemplate, [MMMarkdown HTMLStringWithMarkdown:self.rawMarkdownContent error:&error]] baseURL:bundleBaseURL];
+            if (error) {
+                NSLog(@"MMMarkdown Error: %@", error);
+            }
+        } else {
+            if (error) {
+                NSLog(@"Pod Error: %@", error);
+            }
         }
     } else if (self.urlString) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
@@ -84,9 +99,11 @@
  */
 
 - (IBAction)dismiss:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        //... do nothing...
-    }];
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:^{ /* ... do nothing... */ }];
+    } else if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 

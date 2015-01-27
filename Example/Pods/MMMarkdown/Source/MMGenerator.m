@@ -56,7 +56,7 @@ static NSString *__obfuscatedEmailAddress(NSString *anAddress)
     NSString *(^decimal)(unichar c) = ^(unichar c){ return [NSString stringWithFormat:@"&#%d;", c];  };
     NSString *(^hex)(unichar c)     = ^(unichar c){ return [NSString stringWithFormat:@"&#x%x;", c]; };
     NSString *(^raw)(unichar c)     = ^(unichar c){ return [NSString stringWithCharacters:&c length:1]; };
-    NSArray *encoders = [NSArray arrayWithObjects:decimal, hex, raw, nil];
+    NSArray *encoders = @[ decimal, hex, raw ];
     
     for (NSUInteger idx=0; idx<anAddress.length; idx++)
     {
@@ -70,7 +70,7 @@ static NSString *__obfuscatedEmailAddress(NSString *anAddress)
         else
         {
             int r = arc4random_uniform(100);
-            encoder = [encoders objectAtIndex:(r >= 90) ? 2 : (r >= 45) ? 1 : 0];
+            encoder = encoders[(r >= 90) ? 2 : (r >= 45) ? 1 : 0];
         }
         [result appendString:encoder(character)];
     }
@@ -95,11 +95,13 @@ static NSString * __HTMLStartTagForElement(MMElement *anElement)
         case MMElementTypeBlockquote:
             return @"<blockquote>\n";
         case MMElementTypeCodeBlock:
-            return @"<pre><code>";
+          return anElement.language ? [NSString stringWithFormat:@"<pre><code class=\"%@\">", anElement.language] : @"<pre><code>";
         case MMElementTypeLineBreak:
             return @"<br />";
         case MMElementTypeHorizontalRule:
             return @"\n<hr />\n";
+        case MMElementTypeStrikethrough:
+            return @"<del>";
         case MMElementTypeStrong:
             return @"<strong>";
         case MMElementTypeEm:
@@ -130,6 +132,22 @@ static NSString * __HTMLStartTagForElement(MMElement *anElement)
                     __obfuscatedEmailAddress(anElement.href)];
         case MMElementTypeEntity:
             return anElement.stringValue;
+        case MMElementTypeTable:
+            return @"<table>";
+        case MMElementTypeTableHeader:
+            return @"<thead><tr>";
+        case MMElementTypeTableHeaderCell:
+            return anElement.alignment == MMTableCellAlignmentCenter ? @"<th align='center'>"
+                 : anElement.alignment == MMTableCellAlignmentLeft   ? @"<th align='left'>"
+                 : anElement.alignment == MMTableCellAlignmentRight  ? @"<th align='right'>"
+                 : @"<th>";
+        case MMElementTypeTableRow:
+            return @"<tr>";
+        case MMElementTypeTableRowCell:
+            return anElement.alignment == MMTableCellAlignmentCenter ? @"<td align='center'>"
+                 : anElement.alignment == MMTableCellAlignmentLeft   ? @"<td align='left'>"
+                 : anElement.alignment == MMTableCellAlignmentRight  ? @"<td align='right'>"
+                 : @"<td>";
         default:
             return nil;
     }
@@ -153,6 +171,8 @@ static NSString * __HTMLEndTagForElement(MMElement *anElement)
             return @"</blockquote>\n";
         case MMElementTypeCodeBlock:
             return @"</code></pre>\n";
+        case MMElementTypeStrikethrough:
+            return @"</del>";
         case MMElementTypeStrong:
             return @"</strong>";
         case MMElementTypeEm:
@@ -161,6 +181,16 @@ static NSString * __HTMLEndTagForElement(MMElement *anElement)
             return @"</code>";
         case MMElementTypeLink:
             return @"</a>";
+        case MMElementTypeTable:
+            return @"</tbody></table>";
+        case MMElementTypeTableHeader:
+            return @"</tr></thead><tbody>";
+        case MMElementTypeTableHeaderCell:
+            return @"</th>";
+        case MMElementTypeTableRow:
+            return @"</tr>";
+        case MMElementTypeTableRowCell:
+            return @"</td>";
         default:
             return nil;
     }
@@ -175,10 +205,7 @@ static NSString * __HTMLEndTagForElement(MMElement *anElement)
 
 @implementation MMGenerator
 
-//==================================================================================================
-#pragma mark -
-#pragma mark Public Methods
-//==================================================================================================
+#pragma mark - Public Methods
 
 - (NSString *)generateHTML:(MMDocument *)aDocument
 {
@@ -207,10 +234,7 @@ static NSString * __HTMLEndTagForElement(MMElement *anElement)
 }
 
 
-//==================================================================================================
-#pragma mark -
-#pragma mark Public Methods
-//==================================================================================================
+#pragma mark - Private Methods
 
 - (void)_generateHTMLForElement:(MMElement *)anElement
                      inDocument:(MMDocument *)aDocument
