@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) NSString *cellIdentifier;
-@property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
+@property (nonatomic, copy) BSGTableViewCellConfigureBlock configureCellBlock;
 
 @end
 
@@ -24,7 +24,7 @@
 
 - (id)initWithItems:(NSArray *)anItems
      cellIdentifier:(NSString *)aCellIdentifier
- configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock {
+ configureCellBlock:(BSGTableViewCellConfigureBlock)aConfigureCellBlock {
     self = [super init];
     if (self) {
         self.items = anItems;

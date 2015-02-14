@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSGEntitiesTableViewController.h"
 
-@interface BSGViewController : UITableViewController
+@interface BSGViewController : UITableViewController<BSGEntitiesTableViewDelegate>
 
 @end
