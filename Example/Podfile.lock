@@ -1,5 +1,5 @@
 PODS:
-  - BSGUtilities (0.2.0):
+  - BSGUtilities (0.3.0):
     - MMMarkdown (~> 0.3)
   - Expecta (0.3.1)
   - Expecta+Snapshots (1.2.1):
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BSGUtilities: 71f1795d55915938bc1a8073299060b3d2c1011d
+  BSGUtilities: f58d3aaac1b25af96d0e37e434d1c5eb94a3d0a1
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Expecta+Snapshots: 30c28e3d8104665ee70e32df1cfc030bb37a8a6c
   FBSnapshotTestCase: 4fc617f1cb970fe987b98b3525b3aac106baaabf

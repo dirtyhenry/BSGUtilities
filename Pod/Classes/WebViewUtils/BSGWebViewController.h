@@ -14,7 +14,7 @@
  
  Two options to load content:
  
- 1. Set the `rawMarkdownContent` property with raw Markdown like `@"## Toto *Italic*`
+ 1. Set the `raMarkdownContent` property with raw Markdown like `@"## Toto *Italic*`
  2. Set the `urlString` property with a URL string like `http://www.google.fr`
 
  TODO: eventually, this class should be moved in a private POD.
