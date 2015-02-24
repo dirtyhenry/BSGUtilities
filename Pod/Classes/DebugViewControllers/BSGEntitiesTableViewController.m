@@ -46,6 +46,20 @@
 }
 
 
+- (NSUInteger)countEntities:(NSEntityDescription *)entityDescription inContext:(NSManagedObjectContext *)context {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:entityDescription.name];
+    request.resultType = NSCountResultType;
+    NSError *error = nil;
+    NSUInteger count = [context countForFetchRequest:request error:&error];
+    if (count == NSNotFound) {
+        [NSException raise:@"Couldn't count"
+                    format:@"An error happened: %@", error];
+    }
+
+    return count;
+}
+
+
 - (void)setModel:(NSManagedObjectModel *)model {
     _model = model;
     NSArray *entities = [model entities];
@@ -56,8 +70,7 @@
                                                  NSEntityDescription *entityDescription = item;
                                                  UITableViewCell *myCell = cell;
                                                  myCell.textLabel.text = entityDescription.name;
-                                                 //TODO: display a count of the objects here
-                                                 myCell.detailTextLabel.text = @"TODO";
+                                                 myCell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)[self countEntities:entityDescription inContext:self.context]];
     }];
     self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
