@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/DebugViewControllers/BSGManagedObjectsTableViewController.h
