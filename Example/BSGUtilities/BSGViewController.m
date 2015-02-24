@@ -29,24 +29,31 @@
     [super viewDidLoad];
 
     // Create lots of entities
-    // TODO: just do this at the 1st launch (ie the Core Data store is empty)
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.modelsAndMainAttributes = @{ @"JohnLennon": @"humor", @"GeorgeHarrison": @"solo", @"PaulMcCartney": @"bass", @"RingoStarr": @"drums" };
-    for (NSString *entityName in [self.modelsAndMainAttributes allKeys]) {
-        if (self.managedObjectContext)
-        for (int i = 0; i < 10; i++) {
-            NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.managedObjectContext];
-            [object setValue:[NSString stringWithFormat:@"%@ %d", entityName, i] forKey:[self.modelsAndMainAttributes objectForKey:entityName]];
-        }
 
-        NSError *error = nil;
-        if (![self.managedObjectContext save:&error]) {
-            NSLog(@"Error while saving: %@", error);
+    if ([[defaults stringForKey:@"FedCoreData-f2990926-9cbc-4bcf-a878-09d1b4072a8d"] isEqualToString:@"f2990926-9cbc-4bcf-a878-09d1b4072a8d"]) {
+        // Do nothing. We can decide to do other stuff for later versions.
+    } else {
+        [defaults setObject:@"f2990926-9cbc-4bcf-a878-09d1b4072a8d" forKey:@"FedCoreData-f2990926-9cbc-4bcf-a878-09d1b4072a8d"];
+        [defaults synchronize];
+
+        for (NSString *entityName in [self.modelsAndMainAttributes allKeys]) {
+            if (self.managedObjectContext)
+                for (int i = 0; i < 10; i++) {
+                    NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.managedObjectContext];
+                    [object setValue:[NSString stringWithFormat:@"%@ %d", entityName, i] forKey:[self.modelsAndMainAttributes objectForKey:entityName]];
+                }
+
+            NSError *error = nil;
+            if (![self.managedObjectContext save:&error]) {
+                NSLog(@"Error while saving: %@", error);
+            }
         }
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
