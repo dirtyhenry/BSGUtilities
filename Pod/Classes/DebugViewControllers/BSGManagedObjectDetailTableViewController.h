@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "BSGEntitiesTableViewController.h"
 
 
+/**
+ *  This table view controller is intended to be fed with a `NSManagedObject`
+ *  so that it displays all the CoreData attributes of this entity as its rows.
+ *
+ *  This table view controller is made for debug purpose only.
+ */
 @interface BSGManagedObjectDetailTableViewController : UITableViewController
 
 /**
- *  The delegate object that is used to describe objects.
- *  cf. `BSGEntitiesTableViewDelegate` for implementation details.
+ *  The managed object to describe in the table view.
  */
-@property (weak, nonatomic) id<BSGEntitiesTableViewDelegate> delegate;
-
 @property (strong, nonatomic) NSManagedObject *managedObject;
 
 @end

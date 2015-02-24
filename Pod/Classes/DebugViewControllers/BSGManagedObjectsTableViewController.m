@@ -69,7 +69,6 @@
     if ([segue.identifier isEqualToString:@"BSGManagedObjectDetailTableViewController"]) {
         NSManagedObject *managedObject = [self.dataSource itemAtIndexPath:[self.tableView indexPathForCell:sender]];
         BSGManagedObjectDetailTableViewController *vc = segue.destinationViewController;
-        vc.delegate = self.delegate;
         vc.managedObject = managedObject;
     }
 }
