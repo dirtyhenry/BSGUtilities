@@ -76,6 +76,7 @@
     [self.tableView reloadData];
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"BSGManagedObjectsTableViewController"]) {
         NSEntityDescription *entityDescription = [self.dataSource itemAtIndexPath:[self.tableView indexPathForCell:sender]];

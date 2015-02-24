@@ -32,4 +32,14 @@
                     configureCellBlock:(BSGTableViewCellConfigureBlock)aConfigureCellBlock
                              tableView:(UITableView *)tableView;
 
+/**
+ *  Returns the item at the given indexPath.
+ *
+ *  @param indexPath indexPath of the object to return (section is ignored, only
+ *                   row is used)
+ *
+ *  @return the item at the given indexPath.
+ */
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

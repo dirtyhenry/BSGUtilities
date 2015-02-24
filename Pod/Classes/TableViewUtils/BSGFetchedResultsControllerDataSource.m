@@ -76,4 +76,8 @@ tableView:(UITableView *)tableView {
     }
 }
 
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.fetchedResultsController objectAtIndexPath:indexPath];
+}
+
 @end
