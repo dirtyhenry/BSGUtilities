@@ -9,7 +9,7 @@
 
 Validate the pod:
 
-    pod lib lint # from the root
+    pod lib lint # from the **root**
 
 ## Usage
 

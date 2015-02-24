@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "Bootstragram iOS Utilities Pod"
   s.description      = <<-DESC
                        Bootstragram iOS Utilities Pod
@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/dirtyhenry/BSGUtilities"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Mickaël Floc'hlay" => "dirtyhenry@gmail.com" }
-  s.source           = { :git => "https://github.com/dirtyhenry/BSGUtilities.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/dirtyhenry'
+  s.author           = { "Bootstragram" => "contact@bootstragram.com" }
+  s.source           = { :git => "https://github.com/Bootstragram/BSGUtilities.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/bootstragram'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'BSGUtilities' => ['Pod/Assets/*.png']
   }
+  s.resources = ['Pod/Assets/html/*.html', 'Pod/Assets/css/*.css']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
