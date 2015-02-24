@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-typedef void (^TableViewCellConfigureBlock)(id cell, id item);
+#import "BSGCommonDataSource.h"
 
 /**
  A `UITableViewDataSource` implementation using an `NSArray` as a base.
@@ -25,11 +24,11 @@ typedef void (^TableViewCellConfigureBlock)(id cell, id item);
  *  @param aCellIdentifier     the cell identifier
  *  @param aConfigureCellBlock the block to configure cells
  *
- *  @return <#return value description#>
+ *  @return
  */
 - (id)initWithItems:(NSArray *)anItems
      cellIdentifier:(NSString *)aCellIdentifier
- configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
+ configureCellBlock:(BSGTableViewCellConfigureBlock)aConfigureCellBlock;
 
 /**
  *  Returns the item at the given indexPath.
