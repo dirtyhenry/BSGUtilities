@@ -26,7 +26,7 @@ task :lint do |t|
   sh "pod lib lint"
 end
 
-desc "Deploy in private repo"
+desc "Deploy in public repo"
 task :deploy do |t|
   sh "pod repo push bootstragram-public-pod-repo BSGUtilities.podspec"
 end
