@@ -28,5 +28,6 @@ end
 
 desc "Deploy in public repo"
 task :deploy do |t|
+  # The version branch should be available on the remote before running this
   sh "pod repo push bootstragram-public-pod-repo BSGUtilities.podspec"
 end
