@@ -62,4 +62,11 @@
  */
 - (IBAction)dismiss:(id)sender;
 
+/**
+ *  Force reloading contents. 
+ *
+ *  This method should only be called by subclasses.
+ */
+- (void)refreshContent;
+
 @end
