@@ -28,6 +28,11 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"didFailLoadWithError:%@ %@", error, (webView.loading ? @"yes" : @"no"));
+
+    if (error.domain == NSURLErrorDomain && error.code == -1009) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"NoInternetTitle", nil) message:NSLocalizedString(@"NoInternet", nil) delegate:(self.errorAlertDelegate ? self.errorAlertDelegate : nil) cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+
     [self.spinner stopAnimating];
 }
 

@@ -10,7 +10,7 @@
 #import <MMMarkdown/MMMarkdown.h>
 #import "BSGWebViewDelegate.h"
 
-@interface BSGWebViewController ()
+@interface BSGWebViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) BSGWebViewDelegate *webViewDelegate;
 
@@ -24,6 +24,7 @@
     // Configure the delegate
     self.webViewDelegate = [[BSGWebViewDelegate alloc] init];
     self.webViewDelegate.spinner = self.spinner;
+    self.webViewDelegate.errorAlertDelegate = self;
     self.webView.delegate = self.webViewDelegate;
 
     // Configure the close Button
@@ -120,6 +121,12 @@
             [self.spinner stopAnimating];
         }
     }
+}
+
+
+- (void)alertView:(UIAlertView *)alertView
+didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    [self dismiss:self];
 }
 
 @end
