@@ -41,6 +41,7 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
 
 @property (strong, nonatomic) MMElement *blockElement;
 @property (assign, nonatomic) BOOL parseEm;
+@property (assign, nonatomic) BOOL parseImages;
 @property (assign, nonatomic) BOOL parseLinks;
 @property (assign, nonatomic) BOOL parseStrong;
 @end
@@ -58,6 +59,7 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
         _extensions = extensions;
         _htmlParser = [MMHTMLParser new];
         self.parseEm     = YES;
+        self.parseImages = YES;
         self.parseLinks  = YES;
         self.parseStrong = YES;
     }
@@ -272,13 +274,16 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
             return element;
         
         [scanner beginTransaction];
-        element = [self _parseImageWithScanner:scanner];
+        element = [self _parseLinkWithScanner:scanner];
         [scanner commitTransaction:element != nil];
         if (element)
             return element;
-        
+    }
+    
+    if (self.parseImages)
+    {
         [scanner beginTransaction];
-        element = [self _parseLinkWithScanner:scanner];
+        element = [self _parseImageWithScanner:scanner];
         [scanner commitTransaction:element != nil];
         if (element)
             return element;
@@ -529,8 +534,13 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
 
 - (MMElement *)_parseEmAndStrongWithScanner:(MMScanner *)scanner
 {
+    // Must have 1-3 *s or _s
+    unichar character = scanner.nextCharacter;
+    if (!(character == '*' || character == '_'))
+        return nil;
+    
     NSCharacterSet *alphanumericSet = NSCharacterSet.alphanumericCharacterSet;
-    if (self.extensions & MMMarkdownExtensionsUnderscoresInWords)
+    if (self.extensions & MMMarkdownExtensionsUnderscoresInWords && character == '_')
     {
         // GFM doesn't italicize parts of words
         
@@ -543,11 +553,6 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
         if (isWordChar)
             return nil;
     }
-    
-    // Must have 1-3 *s or _s
-    unichar character = scanner.nextCharacter;
-    if (!(character == '*' || character == '_'))
-        return nil;
     
     // Must not be preceded by one of the same
     if (scanner.previousCharacter == character)
@@ -591,7 +596,7 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
         if (numberOfEndChars == 0 || (numberOfEndChars != remainingChars && remainingChars != 3))
             return NO;
         
-        if (self.extensions & MMMarkdownExtensionsUnderscoresInWords)
+        if (self.extensions & MMMarkdownExtensionsUnderscoresInWords && character == '_')
         {
             // GFM doesn't italicize parts of words
             unichar nextChar = scanner.nextCharacter;
@@ -1149,7 +1154,9 @@ static NSString * const ESCAPABLE_CHARS = @"\\`*_{}[]()#+-.!>";
     // Add a transaction to protect the ! that was scanned
     [scanner beginTransaction];
     
+    self.parseImages = NO;
     element = [self _parseInlineLinkWithScanner:scanner];
+    self.parseImages = YES;
     
     if (element == nil)
     {

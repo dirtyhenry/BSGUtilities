@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "Bootstragram iOS Utilities Pod"
   s.description      = <<-DESC
                        Bootstragram iOS Utilities Pod
