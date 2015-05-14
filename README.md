@@ -1,6 +1,6 @@
 # BSGUtilities
 
-[![CI Status](http://img.shields.io/travis/Bootstragram/BSGUtilities.svg?style=flat)](https://travis-ci.org/Mickaël Floc'hlay/BSGUtilities)
+[![CI Status](http://img.shields.io/travis/Bootstragram/BSGUtilities.svg?style=flat)](https://travis-ci.org/Bootstragram/BSGUtilities)
 [![Version](https://img.shields.io/cocoapods/v/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
 [![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
 [![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
