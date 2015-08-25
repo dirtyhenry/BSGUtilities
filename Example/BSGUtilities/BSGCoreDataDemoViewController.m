@@ -113,11 +113,42 @@
         return;
     }
     uint32_t rnd = arc4random_uniform([objects count]);
+
     NSManagedObject *object = [objects objectAtIndex:rnd];
-    [object setValue:@"Updated" forKey:@"myAttribute"];
-    NSError *error = nil;
-    NSLog(@"Updated object %@", object.objectID);
-    [self.managedObjectContext save:&error];
+
+    NSLog(@"Concurrency Type: %lu", (unsigned long)self.managedObjectContext.concurrencyType);
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    context.parentContext = self.managedObjectContext;
+    [context performBlock:^{
+        NSLog(@"Main thread: %@", ([NSThread isMainThread] ? @"yes" : @"no"));
+
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity =
+        [NSEntityDescription entityForName:@"DemoCoreData"
+                    inManagedObjectContext:context];
+        [request setEntity:entity];
+
+        NSPredicate *predicate =
+        [NSPredicate predicateWithFormat:@"self == %@", object];
+        [request setPredicate:predicate];
+
+        NSError *error;
+        NSArray *array = [context executeFetchRequest:request error:&error];
+        if (array != nil) {
+            NSUInteger count = [array count];
+            if (count == 1) {
+                NSManagedObject *tmp = [array objectAtIndex:0];
+                [tmp setValue:@"Updated" forKey:@"myAttribute"];
+                NSError *error = nil;
+                NSLog(@"Updated object %@", object.objectID);
+                [context save:&error];
+            } else {
+                NSLog(@"ERREUR");
+            }
+        } else {
+            NSLog(@"ERREUR");
+        }
+    }];
 }
 
 - (IBAction)removeElementAction:(id)sender {
