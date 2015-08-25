@@ -9,6 +9,7 @@
 #import "BSGViewController.h"
 #import <CoreData/CoreData.h>
 #import "BSGWebViewController.h"
+#import "BSGCoreDataDemoViewController.h"
 
 
 @interface BSGViewController ()
@@ -80,6 +81,9 @@
             NSLog(@"Error: %@", error);
         }
         destinationVC.rawMarkdownContent = rawMarkdown;
+    } else if ([segue.identifier isEqualToString:@"CoreDataDemo"]) {
+        BSGCoreDataDemoViewController *destinationVC = segue.destinationViewController;
+        destinationVC.managedObjectContext = self.managedObjectContext;
     }
 }
 
@@ -141,7 +145,7 @@
     if (!coordinator) {
         return nil;
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
 }

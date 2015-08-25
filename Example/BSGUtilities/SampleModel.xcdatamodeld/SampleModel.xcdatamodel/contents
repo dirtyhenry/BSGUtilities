@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DemoCoreData" syncable="YES">
+        <attribute name="myAttribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mySection" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="GeorgeHarrison" syncable="YES">
         <attribute name="solo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -17,5 +21,6 @@
         <element name="JohnLennon" positionX="-63" positionY="-18" width="128" height="58"/>
         <element name="PaulMcCartney" positionX="-54" positionY="0" width="128" height="58"/>
         <element name="RingoStarr" positionX="-36" positionY="18" width="128" height="58"/>
+        <element name="DemoCoreData" positionX="-36" positionY="9" width="128" height="75"/>
     </elements>
 </model>
