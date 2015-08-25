@@ -45,6 +45,9 @@ tableView:(UITableView *)tableView {
 }
 
 
+#pragma mark - UITableViewDataSource
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
     return self.fetchedResultsController.sections.count;
 }
@@ -64,17 +67,77 @@ tableView:(UITableView *)tableView {
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)sectionIndex {
+    id<NSFetchedResultsSectionInfo> section = self.fetchedResultsController.sections[sectionIndex];
+    return section.name;
+}
 
-- (void)controller:(NSFetchedResultsController*)controller
-   didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath*)indexPath
-     forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath*)newIndexPath {
-    if (type == NSFetchedResultsChangeInsert) {
-        [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    switch(type) {
+        case NSFetchedResultsChangeUpdate:
+            NSLog(@"NSFetchedResultsChangeUpdate is not supported yet");
+            break;
+        case NSFetchedResultsChangeMove:
+            NSLog(@"NSFetchedResultsChangeMove is not supported yet");
+            break;
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
+
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
     }
 }
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+
+    UITableView *tableView = self.tableView;
+
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+
+        case NSFetchedResultsChangeUpdate:
+        {
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            NSManagedObject *item = [self itemAtIndexPath:indexPath];
+            self.configureCellBlock(cell, item);
+            break;
+        }
+
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:@[newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
+
+#pragma mark - Utils
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];

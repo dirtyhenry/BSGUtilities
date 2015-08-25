@@ -9,6 +9,7 @@
 #import "BSGViewController.h"
 #import <CoreData/CoreData.h>
 #import "BSGWebViewController.h"
+#import "BSGCoreDataDemoViewController.h"
 
 
 @interface BSGViewController ()
@@ -80,6 +81,9 @@
             NSLog(@"Error: %@", error);
         }
         destinationVC.rawMarkdownContent = rawMarkdown;
+    } else if ([segue.identifier isEqualToString:@"CoreDataDemo"]) {
+        BSGCoreDataDemoViewController *destinationVC = segue.destinationViewController;
+        destinationVC.managedObjectContext = self.managedObjectContext;
     }
 }
 
