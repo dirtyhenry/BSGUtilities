@@ -1,24 +1,10 @@
 PODS:
   - BSGUtilities (0.4.0):
     - MMMarkdown (~> 0.3)
-  - Expecta (1.0.2)
-  - Expecta+Snapshots (2.0.0):
-    - Expecta (~> 1.0)
-    - FBSnapshotTestCase/Core (~> 2.0.3)
-  - FBSnapshotTestCase (2.0.3):
-    - FBSnapshotTestCase/SwiftSupport (= 2.0.3)
-  - FBSnapshotTestCase/Core (2.0.3)
-  - FBSnapshotTestCase/SwiftSupport (2.0.3):
-    - FBSnapshotTestCase/Core
   - MMMarkdown (0.5)
-  - Specta (0.2.1)
 
 DEPENDENCIES:
   - BSGUtilities (from `../`)
-  - Expecta
-  - Expecta+Snapshots
-  - FBSnapshotTestCase
-  - Specta (~> 0.2.1)
 
 EXTERNAL SOURCES:
   BSGUtilities:
@@ -26,10 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BSGUtilities: 4e2f7163f30020eb851a9e217a33235bb16e3961
-  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
-  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
-  FBSnapshotTestCase: d0eeca6bf87958e088b254396ae66873f971cfb1
   MMMarkdown: 74e6a040d7c41419d86c0ec22b2a49755a10e0fd
-  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
 
 COCOAPODS: 0.35.0

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Mickaël Floc'hlay. All rights reserved.
 //
 
-SpecBegin(InitialSpecs)
+//SpecBegin(InitialSpecs)
 
 /*
 describe(@"these will fail", ^{
@@ -25,6 +25,7 @@ describe(@"these will fail", ^{
 });
  */
 
+/*
 describe(@"these will pass", ^{
     
     it(@"can do maths", ^{
@@ -43,3 +44,4 @@ describe(@"these will pass", ^{
 });
 
 SpecEnd
+ */
