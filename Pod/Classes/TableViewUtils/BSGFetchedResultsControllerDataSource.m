@@ -10,10 +10,12 @@
 
 @interface BSGFetchedResultsControllerDataSource () <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, copy) NSString *cellIdentifier;
-@property (nonatomic, copy) BSGTableViewCellConfigureBlock configureCellBlock;
-@property (weak, nonatomic) UITableView *tableView;
+@property(nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property(nonatomic, copy) NSString *cellIdentifier;
+@property(nonatomic, copy) BSGTableViewCellConfigureBlock configureCellBlock;
+@property(weak, nonatomic) UITableView *tableView;
+
+@property(strong, nonatomic) NSIndexPath *indexPathToSelectWhenUpdatesEnd;
 
 @end
 
@@ -23,14 +25,18 @@
 - (id)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
                         cellIdentifier:(NSString *)aCellIdentifier
                     configureCellBlock:(BSGTableViewCellConfigureBlock)aConfigureCellBlock
-tableView:(UITableView *)tableView {
+                             tableView:(UITableView *)tableView {
     self = [super init];
     if (self) {
+        // Selection preservation code.
+        self.reselectsAfterUpdates = NO;
+        self.indexPathToSelectWhenUpdatesEnd = NO;
+        
         self.fetchedResultsController = fetchedResultsController;
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
         self.tableView = tableView;
-
+        
         // Perform the fetch!
         self.fetchedResultsController.delegate = self;
         NSError *error = nil;
@@ -75,6 +81,7 @@ tableView:(UITableView *)tableView {
 #pragma mark - NSFetchedResultsControllerDelegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    self.indexPathToSelectWhenUpdatesEnd = nil;
     [self.tableView beginUpdates];
 }
 
@@ -91,7 +98,7 @@ tableView:(UITableView *)tableView {
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
             break;
-
+            
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
@@ -102,39 +109,60 @@ tableView:(UITableView *)tableView {
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-
+    
     UITableView *tableView = self.tableView;
-
+    
     switch(type) {
-        case NSFetchedResultsChangeInsert:
+        case NSFetchedResultsChangeInsert: {
             [tableView insertRowsAtIndexPaths:@[newIndexPath]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
-
-        case NSFetchedResultsChangeDelete:
+        }
+            
+        case NSFetchedResultsChangeDelete: {
             [tableView deleteRowsAtIndexPaths:@[indexPath]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
-
-        case NSFetchedResultsChangeUpdate:
-        {
+        }
+            
+        case NSFetchedResultsChangeUpdate: {
+            if ([indexPath isEqual:tableView.indexPathForSelectedRow]) {
+                self.indexPathToSelectWhenUpdatesEnd = newIndexPath;
+            }
+            
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
             NSManagedObject *item = [self itemAtIndexPath:indexPath];
             self.configureCellBlock(cell, item);
             break;
         }
-
-        case NSFetchedResultsChangeMove:
+            
+        case NSFetchedResultsChangeMove: {
+            if ([indexPath isEqual:tableView.indexPathForSelectedRow]) {
+                self.indexPathToSelectWhenUpdatesEnd = newIndexPath;
+            }
+            
             [tableView deleteRowsAtIndexPaths:@[indexPath]
                              withRowAnimation:UITableViewRowAnimationFade];
             [tableView insertRowsAtIndexPaths:@[newIndexPath]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
+        }
     }
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+    
+    if (_reselectsAfterUpdates && _indexPathToSelectWhenUpdatesEnd) {
+        NSLog(@"Restoring selection");
+        [self.tableView beginUpdates];
+        [self.tableView selectRowAtIndexPath:_indexPathToSelectWhenUpdatesEnd
+                                    animated:NO
+                              scrollPosition:UITableViewScrollPositionNone];
+        [self.tableView endUpdates];
+    }
+    
+    self.indexPathToSelectWhenUpdatesEnd = nil;
 }
 
 #pragma mark - Utils

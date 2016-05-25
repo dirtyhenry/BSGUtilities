@@ -18,8 +18,9 @@
 
 @implementation BSGCoreDataDemoViewController
 
+
 - (NSArray *)fetchAll {
-    // Fetch 'em and delete 'em all
+    // Fetch 'em all
     NSFetchRequest *allDemoObjects = [[NSFetchRequest alloc] init];
     [allDemoObjects setEntity:[NSEntityDescription entityForName:@"DemoCoreData" inManagedObjectContext:self.managedObjectContext]];
 
@@ -27,6 +28,7 @@
     NSArray *objects = [self.managedObjectContext executeFetchRequest:allDemoObjects error:&error];
     return objects;
 }
+
 
 - (void)removeObject:(NSUInteger)numberOfObjects {
     NSArray *objects = [self fetchAll];
@@ -53,6 +55,7 @@
     //more error handling here
 }
 
+
 - (void)createObject:(NSUInteger)numberOfObjects {
     for (int i = 0; i < numberOfObjects; i++) {
         NSManagedObject *obj = [NSEntityDescription
@@ -65,6 +68,7 @@
     NSError *error = nil;
     [self.managedObjectContext save:&error];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -91,7 +95,8 @@
                                                                                        UITableViewCell *myCell = (UITableViewCell *)cell;
                                                                                        NSManagedObject *myObject = (NSManagedObject *)item;
                                                                                        myCell.textLabel.text = [myObject valueForKey:@"myAttribute"];
-    } tableView:self.tableView];
+                                                                                   } tableView:self.tableView];
+    self.dataSource.reselectsAfterUpdates = YES;
 
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self;
@@ -115,7 +120,21 @@
     uint32_t rnd = arc4random_uniform([objects count]);
 
     NSManagedObject *object = [objects objectAtIndex:rnd];
+    [self updateElement:object];
+}
 
+
+- (IBAction)removeElementAction:(id)sender {
+    [self removeObject:1];
+}
+
+
+- (IBAction)updateSelectedElementAction:(id)sender {
+    [self updateElement:[self.dataSource itemAtIndexPath:self.tableView.indexPathForSelectedRow]];
+}
+
+
+- (void)updateElement:(NSManagedObject *)object {
     NSLog(@"Concurrency Type: %lu", (unsigned long)self.managedObjectContext.concurrencyType);
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     context.parentContext = self.managedObjectContext;
@@ -151,8 +170,27 @@
     }];
 }
 
-- (IBAction)removeElementAction:(id)sender {
-    [self removeObject:1];
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"did select");
+
+    [tableView beginUpdates];
+    [tableView endUpdates];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSLog(@"will select");
+    return indexPath;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 44.0;
+
+    if ([indexPath isEqual:tableView.indexPathForSelectedRow]) {
+        height = 66.0;
+    }
+
+    return height;
 }
 
 @end
