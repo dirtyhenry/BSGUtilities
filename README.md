@@ -11,6 +11,10 @@ Validate the pod:
 
     pod lib lint # from the **root**
 
+Publish the pod to the repo:
+
+    pod repo push bootstragram-public-pod-repo BSGUtilities.podspec
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -40,9 +44,9 @@ The easisest way to install the Core Data debug views is via the Storyboard.
 
 Create 3 table view controllers, with the following class names, table view cell identifier and segue identifiers:
 
-1. `BSGEntitiesTableViewController` should use cells with *Right Detail* style, `BSGEntitiesViewControllerCell` 
+1. `BSGEntitiesTableViewController` should use cells with *Right Detail* style, `BSGEntitiesViewControllerCell`
    cell identifier and *Disclosure Indicator* accessory using a `BSGManagedObjectsTableViewController` segue.
-2. `BSGManagedObjectsTableViewController` should use cells with *Right Detail* style, `BSGManagedObjectsViewControllerCell` 
+2. `BSGManagedObjectsTableViewController` should use cells with *Right Detail* style, `BSGManagedObjectsViewControllerCell`
    cell identifier and *Disclosure Indicator* accessory using a `BSGManagedObjectDetailTableViewController` segue.
-3. `BSGManagedObjectDetailTableViewController` should use cells with *Left Detail* style, `BSGManagedObjectDetailViewControllerCell` 
+3. `BSGManagedObjectDetailTableViewController` should use cells with *Left Detail* style, `BSGManagedObjectDetailViewControllerCell`
    cell identifier
