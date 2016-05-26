@@ -26,22 +26,22 @@ describe(@"these will fail", ^{
  */
 
 /*
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
-    });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^AsyncBlock {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            done();
-        });
-    });
-});
-
-SpecEnd
+//describe(@"these will pass", ^{
+//    
+//    it(@"can do maths", ^{
+//        expect(1).beLessThan(23);
+//    });
+//    
+//    it(@"can read", ^{
+//        expect(@"team").toNot.contain(@"I");
+//    });
+//    
+//    it(@"will wait and succeed", ^AsyncBlock {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//            done();
+//        });
+//    });
+//});
+//
+//SpecEnd
  */

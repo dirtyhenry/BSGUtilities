@@ -17,6 +17,9 @@
  */
 @interface BSGFetchedResultsControllerDataSource : NSObject<UITableViewDataSource>
 
+@property(nonatomic) BOOL reselectsAfterUpdates;
+
+
 /**
  *  Initializer.
  *
@@ -25,7 +28,7 @@
  *  @param aConfigureCellBlock      the block to configure cells
  *  @param tableView                the table view being sourced
  *
- *  @return <#return value description#>
+ *  @return a newly created instance
  */
 - (id)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
                         cellIdentifier:(NSString *)aCellIdentifier
