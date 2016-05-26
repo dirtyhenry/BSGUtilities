@@ -15,6 +15,7 @@
 
 - (IBAction)addElementAction:(id)sender;
 - (IBAction)updateElementAction:(id)sender;
+- (IBAction)updateSelectedElementAction:(id)sender;
 - (IBAction)removeElementAction:(id)sender;
 
 @end
