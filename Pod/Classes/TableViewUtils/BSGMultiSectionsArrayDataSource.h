@@ -1,21 +1,16 @@
 //
-//  BSGArrayDataSource.h
+//  BSGMultiSectionsArrayDataSource.h
 //  BSGUtilities
 //
-//  Created by Mickaël Floc'hlay on 25/09/2014.
-//  Copyright (c) 2014 Bootstragram. All rights reserved.
+//  Created by Mickaël Floc'hlay on 26/05/2016.
+//
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BSGCommonDataSource.h"
 
-/**
- A `UITableViewDataSource` implementation using an `NSArray` as a base.
-
- :param: idinitWithItems Preferred initializer
- */
-@interface BSGArrayDataSource : NSObject<UITableViewDataSource>
+@interface BSGMultiSectionsArrayDataSource : NSObject<UITableViewDataSource>
 
 /**
  *  Initializer
@@ -30,6 +25,7 @@
      cellIdentifier:(NSString *)aCellIdentifier
  configureCellBlock:(BSGTableViewCellConfigureBlock)aConfigureCellBlock;
 
+
 /**
  *  Returns the item at the given indexPath.
  *
@@ -39,5 +35,6 @@
  *  @return the item at the given indexPath.
  */
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+
 
 @end

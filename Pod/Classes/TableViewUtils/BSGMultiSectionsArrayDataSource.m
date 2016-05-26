@@ -1,14 +1,14 @@
 //
-//  BSGArrayDataSource.m
+//  BSGMultiSectionsArrayDataSource.m
 //  BSGUtilities
 //
-//  Created by Mickaël Floc'hlay on 25/09/2014.
-//  Copyright (c) 2014 Bootstragram. All rights reserved.
+//  Created by Mickaël Floc'hlay on 26/05/2016.
+//
 //
 
-#import "BSGArrayDataSource.h"
+#import "BSGMultiSectionsArrayDataSource.h"
 
-@interface BSGArrayDataSource ()
+@interface BSGMultiSectionsArrayDataSource ()
 
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) NSString *cellIdentifier;
@@ -16,11 +16,13 @@
 
 @end
 
-@implementation BSGArrayDataSource
+
+@implementation BSGMultiSectionsArrayDataSource
 
 - (id)init {
     return nil;
 }
+
 
 - (id)initWithItems:(NSArray *)anItems
      cellIdentifier:(NSString *)aCellIdentifier
@@ -35,18 +37,18 @@
 }
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
-    return self.items[(NSUInteger) indexPath.row];
+    return [[[self.items objectAtIndex:indexPath.section] objectForKey:@"objects"] objectAtIndex:indexPath.row];
 }
 
 
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [_items count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items.count;
+    return [[[_items objectAtIndex:section] objectForKey:@"objects"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,6 +57,11 @@
     id item = [self itemAtIndexPath:indexPath];
     self.configureCellBlock(cell, item);
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[self.items objectAtIndex:section] objectForKey:@"sectionTitle"];
+
 }
 
 @end
