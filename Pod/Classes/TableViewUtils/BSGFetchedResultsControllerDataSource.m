@@ -106,10 +106,10 @@
     }
 }
 
+
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-
     UITableView *tableView = self.tableView;
 
     switch(type) {
@@ -130,8 +130,14 @@
                 self.indexPathToSelectWhenUpdatesEnd = newIndexPath;
             }
 
+            /** 
+             #16: be careful with this section, cf. http://stackoverflow.com/questions/12438827/how-to-use-newindexpath-for-nsfetchedresultschangeupdate for details
+             */
+            // The cell being used is the *old* one
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            NSManagedObject *item = [self itemAtIndexPath:indexPath];
+            // The object being used is the *new* one
+            NSManagedObject *item = [self itemAtIndexPath:newIndexPath];
+
             self.configureCellBlock(cell, item);
             break;
         }

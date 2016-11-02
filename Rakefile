@@ -13,7 +13,7 @@ end
 
 desc "Open"
 task :open do |t|
-  sh "cd Example && pod update BSGUtilities && pod install && open \"BSGUtilities.xcworkspace\""
+  sh "cd Example && bundle exec pod install && open \"BSGUtilities.xcworkspace\""
 end
 
 desc "Generate the documentation"
