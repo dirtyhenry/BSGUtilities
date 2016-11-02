@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
-  s.version          = "0.4.1"
+  s.version          = "0.4.2"
   s.summary          = "Bootstragram iOS Utilities Pod"
   s.description      = <<-DESC
                        Bootstragram iOS Utilities Pod
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'BSGUtilities' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #   'BSGUtilities' => ['Pod/Assets/*.png']
+  # }
   s.resources = ['Pod/Assets/html/*.html', 'Pod/Assets/css/*.css']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

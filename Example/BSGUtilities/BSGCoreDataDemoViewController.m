@@ -61,7 +61,7 @@
         NSManagedObject *obj = [NSEntityDescription
                                 insertNewObjectForEntityForName:@"DemoCoreData"
                                 inManagedObjectContext:self.managedObjectContext];
-        NSUInteger r = arc4random_uniform(3);
+        NSUInteger r = arc4random_uniform(5);
         [obj setValue:[NSString stringWithFormat:@"Section %lu", (unsigned long)r] forKey:@"mySection"];
         [obj setValue:[[NSUUID UUID] UUIDString] forKey:@"myAttribute"];
     }
@@ -117,7 +117,9 @@
         NSLog(@"Empty");
         return;
     }
-    uint32_t rnd = arc4random_uniform([objects count]);
+
+    // Casting is safe here. Cf. http://stackoverflow.com/questions/19372312/objective-c-implicit-conversion-loses-integer-precision-nsuinteger
+    uint32_t rnd = arc4random_uniform((uint32_t)[objects count]);
 
     NSManagedObject *object = [objects objectAtIndex:rnd];
     [self updateElement:object];
@@ -162,10 +164,10 @@
                 NSLog(@"Updated object %@", object.objectID);
                 [context save:&error];
             } else {
-                NSLog(@"ERREUR");
+                NSLog(@"[ERROR] Count is %ld", [array count]);
             }
         } else {
-            NSLog(@"ERREUR");
+            NSLog(@"[ERROR] Array is nil");
         }
     }];
 }
@@ -178,7 +180,7 @@
     [tableView endUpdates];
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"will select");
     return indexPath;
 }
@@ -191,6 +193,50 @@
     }
 
     return height;
+}
+
+
+- (IBAction)reproduceCrash16:(id)sender {
+    // 1. Find a section with at least 2 items
+    NSInteger nbSections = self.fetchedResultsController.sections.count;
+
+    NSInteger sectionToUse = -1;
+    NSUInteger nbOfObjects = 0;
+    for (NSInteger i = 0; i < nbSections; i++) {
+        id<NSFetchedResultsSectionInfo> section = self.fetchedResultsController.sections[i];
+        if (section.numberOfObjects >= 2) {
+            sectionToUse = i;
+            nbOfObjects = section.numberOfObjects;
+        }
+    }
+
+    if (sectionToUse == -1) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning"
+                                                                       message:@"Please create a section with at least 2 items"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * _Nonnull action) {
+                                                   // Do nothing
+                                               }]];
+
+        [self presentViewController:alert animated:YES completion:^{
+            // Do nothing
+        }];
+        return;
+    }
+
+    // 2. Deletes the second-to-last and updates the last one
+    NSManagedObject *secondToLastObject = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:(nbOfObjects - 2) inSection:sectionToUse]];
+    NSManagedObject *lastObject = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:(nbOfObjects - 1) inSection:sectionToUse]];
+
+    [self.managedObjectContext deleteObject:secondToLastObject];
+    [lastObject setValue:@"Crashed #16" forKey:@"myAttribute"];
+
+    NSError *error = nil;
+    [self.managedObjectContext save:&error];
+
 }
 
 @end

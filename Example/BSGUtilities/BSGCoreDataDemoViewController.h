@@ -18,4 +18,18 @@
 - (IBAction)updateSelectedElementAction:(id)sender;
 - (IBAction)removeElementAction:(id)sender;
 
+
+/**
+ IBAction that reproduces the scenario described here: http://stackoverflow.com/questions/12438827/how-to-use-newindexpath-for-nsfetchedresultschangeupdate
+ as a possible source of crash #16.
+ 
+ In other words, it:
+ 
+ 1. deletes the second-to-last-item of a section
+ 1. it updates the last item of that section
+
+ @param sender the sender of the action
+ */
+- (IBAction)reproduceCrash16:(id)sender;
+
 @end
