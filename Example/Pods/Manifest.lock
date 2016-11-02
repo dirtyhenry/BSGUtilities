@@ -1,5 +1,5 @@
 PODS:
-  - BSGUtilities (0.4.1):
+  - BSGUtilities (0.4.2):
     - MMMarkdown (~> 0.3)
   - MMMarkdown (0.5.4)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BSGUtilities: 09b3a1877a3de110694db88469ccc0e25b048100
+  BSGUtilities: c6ba07ead1ae0ea8a694692155b24a55519082c9
   MMMarkdown: 754f9154136d224178f51f2b2ba67a66a89d96ea
 
 PODFILE CHECKSUM: 4e9c3bbe762fd585d29025c194220a682fea7a69
