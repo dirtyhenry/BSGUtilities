@@ -1,14 +1,9 @@
-source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-target 'BSGUtilities', :exclusive => true do
-  pod "BSGUtilities", :path => "../"
-end
-
-target 'Tests', :exclusive => true do
+target 'BSGUtilities' do
   pod "BSGUtilities", :path => "../"
 
-  #pod 'Specta', '~> 1.0.0'
-  #pod 'Expecta'
-  #pod 'FBSnapshotTestCase'
-  #pod 'Expecta+Snapshots'
+  target 'Tests' do
+    inherit! :search_paths
+  end
 end

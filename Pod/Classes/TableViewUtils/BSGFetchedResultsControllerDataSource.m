@@ -30,7 +30,7 @@
     if (self) {
         // Selection preservation code.
         self.reselectsAfterUpdates = NO;
-        self.indexPathToSelectWhenUpdatesEnd = NO;
+        self.indexPathToSelectWhenUpdatesEnd = nil;
 
         self.fetchedResultsController = fetchedResultsController;
         self.cellIdentifier = aCellIdentifier;
