@@ -7,7 +7,7 @@
 //
 
 #import "BSGCoreDataDemoViewController.h"
-#import "BSGFetchedResultsControllerDataSource.h"
+@import BSGUtilities;
 
 @interface BSGCoreDataDemoViewController ()
 

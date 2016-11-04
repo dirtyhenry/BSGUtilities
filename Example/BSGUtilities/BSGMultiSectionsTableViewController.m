@@ -7,8 +7,7 @@
 //
 
 #import "BSGMultiSectionsTableViewController.h"
-#import "BSGMultiSectionsArrayDataSource.h"
-
+@import BSGUtilities;
 
 @interface BSGMultiSectionsTableViewController ()
 
