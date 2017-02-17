@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003EA1E11E574BBE00BFC80E /* BSGReachabilityNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */; };
 		008E354B1B8DCC3500885C44 /* BSGArrayDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 008E354A1B8DCC3500885C44 /* BSGArrayDataSourceTests.m */; };
 		00C7245B1A03DA6200145ECC /* SampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00C724591A03DA6200145ECC /* SampleModel.xcdatamodeld */; };
 		00C7245D1A03DCA100145ECC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C7245C1A03DCA100145ECC /* CoreData.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003EA1DF1E574BBE00BFC80E /* BSGReachabilityNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGReachabilityNotifier.h; sourceTree = "<group>"; };
+		003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGReachabilityNotifier.m; sourceTree = "<group>"; };
 		008E354A1B8DCC3500885C44 /* BSGArrayDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGArrayDataSourceTests.m; sourceTree = "<group>"; };
 		00C7245A1A03DA6200145ECC /* SampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleModel.xcdatamodel; sourceTree = "<group>"; };
 		00C7245C1A03DCA100145ECC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -174,6 +177,8 @@
 				00D6ED001B8C74BF0012A5B0 /* BSGCoreDataDemoViewController.m */,
 				00F706A01CF748A1000B5DE0 /* BSGMultiSectionsTableViewController.h */,
 				00F706A11CF748A1000B5DE0 /* BSGMultiSectionsTableViewController.m */,
+				003EA1DF1E574BBE00BFC80E /* BSGReachabilityNotifier.h */,
+				003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */,
 			);
 			path = BSGUtilities;
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 			files = (
 				6003F59E195388D20070C39A /* BSGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BSGViewController.m in Sources */,
+				003EA1E11E574BBE00BFC80E /* BSGReachabilityNotifier.m in Sources */,
 				00D6ED011B8C74BF0012A5B0 /* BSGCoreDataDemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				00F706A21CF748A1000B5DE0 /* BSGMultiSectionsTableViewController.m in Sources */,
