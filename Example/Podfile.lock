@@ -2,7 +2,7 @@ PODS:
   - BSGUtilities (0.4.2):
     - MMMarkdown (~> 0.3)
   - HexColors (4.0.0)
-  - MMMarkdown (0.5.4)
+  - MMMarkdown (0.5.5)
   - PPTopMostController (0.0.1)
   - Reachability (3.2)
   - RMessage (2.1.2):
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BSGUtilities: c6ba07ead1ae0ea8a694692155b24a55519082c9
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
-  MMMarkdown: 754f9154136d224178f51f2b2ba67a66a89d96ea
+  MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
   PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RMessage: 048425648963c999e4ad2836d8e706b9692af14a

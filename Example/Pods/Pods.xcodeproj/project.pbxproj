@@ -14,27 +14,26 @@
 		07C0D090CACA2C56B54C515F57263461 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D46BE0D080C333836BC7A50803A0F /* Reachability.m */; };
 		07D9B68A2F771497F831263A846427C2 /* BSGFileSystemExplorer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D62740F2CD5B3A26C88D16C92BDE2D7 /* BSGFileSystemExplorer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0915BD625609E9994A8A9101EC1BA914 /* BSGArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE67C0C5DFA80F275B77DB7BC585C46 /* BSGArrayDataSource.m */; };
-		0961B9E95855B944FAE1632CA190AB63 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 023DA09CAD9BD061D95D2449FF816624 /* MMElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0AAB673BDE309361401D662533338529 /* HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = BC08FAFA6CAC30B39B89745BF4ECB2C3 /* HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		101DE4B7B376016CE97EBFB87D50CE4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
-		10A22AC0B52CD1AC4E0A10DA17BA55CB /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 929988410DF1C5D482C8C387D059080F /* MMHTMLParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		11223A77BCF1D092C47D1D4343F883E9 /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A2BAAD4AD99060C9A487E328841615 /* MMParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		13B3072222CAAB65E960C6B81E6F0547 /* BSGUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A336EB4E1974DA9BA01FD0F980CA14 /* BSGUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B948B338FA30DD18B28B24C12937C8 /* PPTopMostController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9152C92330A188C458FCCC5735035F6 /* PPTopMostController.framework */; };
 		1786936CF11ACD034B54EED5F90C2DE4 /* Pods-BSGUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE428FB86AC15482FB630D927942E86 /* Pods-BSGUtilities-dummy.m */; };
 		197CDEB602BB5E21E78DC147CEA1251D /* BSGFetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB46919CFF8607588FAA8E3C074A0AA /* BSGFetchedResultsControllerDataSource.m */; };
+		1D255D6E6F6E804108A93B69196A95B6 /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C8547571D504EBD5E9C56BC339D73 /* MMGenerator.m */; };
 		20CB9183F7334CA02720B405547438D7 /* BSGCommonDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 12585D46ED0C02E955EE1758107396DD /* BSGCommonDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24E331B67B50758C9F4EE6E023595213 /* BSGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFE7A9AA461D5D44842B730CDAFBD20 /* BSGWebViewController.m */; };
 		266AD4CF4A9073A2A8662048C917C338 /* MMHTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C4D4734B3972715B2F0E5704AFF54E /* MMHTMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2925205B610EEF7D50F82015AAC2E11F /* RMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D813191E35475A12D946F1D5439620A0 /* RMessage.m */; };
-		2AE7A6C5050487B47C385996CC7DA6ED /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 55095FC8C073E1A15A1B817275C86945 /* MMScanner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2ECC488C15360DE1868A0D2DEEBFB831 /* PPTopMostControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A6FACF49C69CCBAC695520696F69946 /* PPTopMostControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3179D51F21BAF4106E8AEEBCC80955C3 /* MMMarkdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 987CA4719DF8B7B82F8011559077D4BA /* MMMarkdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32FA2BA86BCAC6CE1C309789BFC4EE8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
+		342CFE1E295C01EFF348D8D558B20C82 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 023DA09CAD9BD061D95D2449FF816624 /* MMElement.m */; };
 		344EB9EEF6469AA1FEDBA094216A9871 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4616086F90179BD7A2B404093011E54B /* HexColors.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		35A21A3CBE85C41852387A8138FEC4CB /* UIViewController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2D6BD0B4E35A3761A1E3C3D01E97A5 /* UIViewController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		35C4D4F7E69EA1F9797FCD0691B0D01C /* BSGFileSystemExplorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D808A67796B449FECEAF6BF06BB789A /* BSGFileSystemExplorer.m */; };
 		3D2F8CEDAA771A05DBE31583D5B31833 /* RMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A65379B6B5767FB28788530764E54 /* RMessageView.xib */; };
+		43B4224F516CB73876C25933ADE8BA50 /* MMMarkdown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 645FEB13FA479198739800A8DF328D22 /* MMMarkdown-dummy.m */; };
 		454ADD7353F72AAC93B358D3FAEF55C8 /* UINavigationController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD62F46A5016A6A2DB719D2C80F0058 /* UINavigationController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4C5DAFA0A73372E0EAB6C5D38E728856 /* BSGUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7188B9AAF56CA7D269F643E966F64 /* BSGUtilities-dummy.m */; };
 		4D5C7DDC36BDF09DE0DCF108C60A0EFF /* MMElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CFC60252523D9BDDC75DDDDDE7EB8B1 /* MMElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +41,7 @@
 		521202E8FBB28616E2FD4E805106AD31 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 71B0CBACF751468537FF48283D6FE84E /* normalize.css */; };
 		53482A44B138D589B73572B082B3EB5E /* RMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C331AD9669739C7A75E87E219FC12D46 /* RMessageView.m */; };
 		54BCC775BB786F9DA03828879248ADC2 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C632CD4C0268B36E4E66EBE4768E7B7 /* NotificationBackgroundSuccessIcon.png */; };
+		5AA48FF6DD9B774A66E4907ABB401247 /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A2BAAD4AD99060C9A487E328841615 /* MMParser.m */; };
 		5DEC0915691DAE6F54B458F266B89344 /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81D2C0707D82EB2FF165591105F54F /* HexColors.framework */; };
 		622ED8D71384EF2E461F9DAD48972967 /* Pods-BSGUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1AC360CC8297D2EF57B51249ECFB52B /* Pods-BSGUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		663FD9D0D29210E663F5503764AE94EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
@@ -53,13 +53,12 @@
 		71B7475DE5270ED8D09A0280A605754A /* BSGWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63423C3827AF73A2C1811A45412668F5 /* BSGWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74298DC6749735234B12903C5F86AD63 /* BSGWebViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3585C834DF952A0EF535FAA7175C6A53 /* BSGWebViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76A52107E5E293FBE17FDA7876A30C7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
-		771AB54A135CAFC68323036C69B9923E /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 94421EF6A7EF7EF4F28DF64B80BFC020 /* MMDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7FF4949E858237512A417AF1C59755A4 /* UIViewController+PPTopMostController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C43FF58333625E7E3939C807A36A3D /* UIViewController+PPTopMostController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		803320DEA202D813C082582C9CF6A2EB /* RMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FB100D2DDF138C2053FC56B7D8B249 /* RMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83D2580F9C13F8DEF473A78358883294 /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4AA545BB279EC11D34D013E8FB1E06 /* MMMarkdown.framework */; };
 		8681BDEC501E30372D808F6D534BACDC /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD1849C5C9D6813CDFD92DFEF06C33 /* Reachability-dummy.m */; };
 		8EC7EE41ABF0395AFF0FC0BEAC2026D0 /* BSGManagedObjectsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 476753507AF8F04258659D6235157FD0 /* BSGManagedObjectsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8ECE2348B8BEDF98944923218CD8EC1A /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B8A22F3B2050F9DC244690C68BB96D /* MMSpanParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		96555390C0DE5C7456E9FCC76F7E401E /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 929988410DF1C5D482C8C387D059080F /* MMHTMLParser.m */; };
 		96E3870623FB1B82E256A486CF7AD463 /* BSGFetchedResultsControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DD119368DDC2451FFD18DD50152B0197 /* BSGFetchedResultsControllerDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97011995E69AF3209D07689D27254AAE /* RMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB1FCAFF86F804F99992E47A83B9BEA /* RMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D91ED38337D9AD0B89DFA6C247DA983 /* BSGManagedObjectDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E537FD1511433D13F87B176871CE2F /* BSGManagedObjectDetailTableViewController.m */; };
@@ -76,19 +75,20 @@
 		B96DACA3CCC61F6E799D9FC10CC55F66 /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2FE338F826CE55E63B8725A8A6C6D /* HexColors-dummy.m */; };
 		C063AE0EF2079E29DCD4224F16D60FB0 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AEEBF0E458C994B34C40F4DD6ACE64 /* Pods-Tests-dummy.m */; };
 		C1E65406D89BB8D3F9BC7F3BFD8AF731 /* BSGManagedObjectsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8CDC60E70CBC2B08BC7B379ECCD60F /* BSGManagedObjectsTableViewController.m */; };
-		C50F1B2868F2A74AE0F6F598D70134DE /* MMMarkdown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 645FEB13FA479198739800A8DF328D22 /* MMMarkdown-dummy.m */; };
 		CB8A7178F9A75309F08A18129963D70E /* UITabBarController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F1B83F6D04D9B9A03D34F45EA07EB /* UITabBarController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CC1E23A40F460D14285C779F5EF11379 /* BSGMultiSectionsArrayDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3447816B3364DE5C2C3FF9FA680F2B65 /* BSGMultiSectionsArrayDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD0F6D1C3473252A49F3A309A4A9DC8B /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743811BA287771F15F68037ED242E92 /* MMMarkdown.m */; };
 		D04058D91E456612EECA4B59D1A482E0 /* BSGArrayDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 10771359BB801F7C6F4D2589B7503C76 /* BSGArrayDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6290E4C56EA54C13D7C49DBE4F9066E /* UITabBarController+PPTopMostController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43184B12E2377686D2255ED9EB8397F8 /* UITabBarController+PPTopMostController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D928CAAC68CC44DBBCC75810E641A5A4 /* MMDocument_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9762F9B9471E3E143C89990DE887F69C /* MMDocument_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA8DAE105D936F0D1FFC9BF2E88F024E /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 94421EF6A7EF7EF4F28DF64B80BFC020 /* MMDocument.m */; };
 		DB166C9A21605DAFADF747ED3D25CC3A /* PPTopMostController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E948FF724C1D49EFBA14CE89BB6A99B /* PPTopMostController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCA35F9F72ABCF066887728530384B3B /* Reachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E57F08B3CC201394BDB38C32059BCC02 /* Reachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCC2B56EA588C22A6BD3D3EE3D410E82 /* MMScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 95508957C84E37F9CCA4D1A3F5D35885 /* MMScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD4F671437BCAC94C610A3703EDE0465 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB753EDC1B6A08A2CA5AC6DA8142771B /* NotificationBackgroundWarningIcon.png */; };
+		DE66772AB1812B75B8BB0805488F0872 /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B8A22F3B2050F9DC244690C68BB96D /* MMSpanParser.m */; };
 		E2BE4E5181257824EF9D5D8FA32398D3 /* RMessageDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = E64B6C5AFF54795478E5322E4EB74B73 /* RMessageDefaultDesign.json */; };
 		E39E6BEC6810CF865E0B56ACFD1690BF /* MMDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = DF8298155223A51B9840BD435E8FAE5C /* MMDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E479948B6065BCBC51B6E3BD57E25FF8 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743811BA287771F15F68037ED242E92 /* MMMarkdown.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E4D8C38823181102A6A6982CD8246289 /* MMParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C11C3CEA3CB0BD6A73C09536D9915C70 /* MMParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED03537BE6CC2C18CA8DAEAAC47B4DB5 /* RMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDD1B7F6F64AE411888032C4F173B0E7 /* RMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDA3729219C20011C0E1FA42B3DFE315 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D738127D93E795EBF6BBBA8043304522 /* NotificationButtonBackground.png */; };
@@ -96,9 +96,9 @@
 		F09947748BBE64D5DB17E5F79D4B1E7E /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 886C6AEA11AF465272E6B223139ED92C /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F22A8569A8715D8142D7E57529827722 /* MMSpanParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5F371342B4D3A3236471D501DEF865 /* MMSpanParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3B6864C5C5362C6ECBCB5D31A269199 /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE3831799F133C36FFDD740E86855A /* NotificationBackgroundWarningIcon@2x.png */; };
+		F468C1B68596C4B35A7C09FCC794D61B /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 55095FC8C073E1A15A1B817275C86945 /* MMScanner.m */; };
 		F76B5D6EA0C107875E31AE58A6458FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
 		F7C65F2C4A81B545583D1A50B1013006 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D8A486F797502BCE11A0E410057447 /* NotificationButtonBackground@2x.png */; };
-		FB23C231BCCE6AAB6CAFE22D94D8AD5F /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C8547571D504EBD5E9C56BC339D73 /* MMGenerator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		FFEDDF72D2DC1FD36FE0858C5B504F96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B02BBAC8D1A5BF273822A48255735B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -975,7 +975,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D86BF62486316E976524BDDF2C2FA8A1 /* Build configuration list for PBXNativeTarget "MMMarkdown" */;
 			buildPhases = (
-				39355E36A377321A1003D7237089AFD8 /* Sources */,
+				FFA37D2D2D4B1F6F7A4859D146C4B369 /* Sources */,
 				6DCDE2C52EEE688F790CFCA8D954C439 /* Frameworks */,
 				25DACAB2B3033D1616A00F9017365EE5 /* Headers */,
 			);
@@ -1123,22 +1123,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39355E36A377321A1003D7237089AFD8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				771AB54A135CAFC68323036C69B9923E /* MMDocument.m in Sources */,
-				0961B9E95855B944FAE1632CA190AB63 /* MMElement.m in Sources */,
-				FB23C231BCCE6AAB6CAFE22D94D8AD5F /* MMGenerator.m in Sources */,
-				10A22AC0B52CD1AC4E0A10DA17BA55CB /* MMHTMLParser.m in Sources */,
-				C50F1B2868F2A74AE0F6F598D70134DE /* MMMarkdown-dummy.m in Sources */,
-				E479948B6065BCBC51B6E3BD57E25FF8 /* MMMarkdown.m in Sources */,
-				11223A77BCF1D092C47D1D4343F883E9 /* MMParser.m in Sources */,
-				2AE7A6C5050487B47C385996CC7DA6ED /* MMScanner.m in Sources */,
-				8ECE2348B8BEDF98944923218CD8EC1A /* MMSpanParser.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A4E947C67A31D9436304A941B0ECADF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1193,6 +1177,22 @@
 			files = (
 				B96DACA3CCC61F6E799D9FC10CC55F66 /* HexColors-dummy.m in Sources */,
 				344EB9EEF6469AA1FEDBA094216A9871 /* HexColors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA37D2D2D4B1F6F7A4859D146C4B369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8DAE105D936F0D1FFC9BF2E88F024E /* MMDocument.m in Sources */,
+				342CFE1E295C01EFF348D8D558B20C82 /* MMElement.m in Sources */,
+				1D255D6E6F6E804108A93B69196A95B6 /* MMGenerator.m in Sources */,
+				96555390C0DE5C7456E9FCC76F7E401E /* MMHTMLParser.m in Sources */,
+				43B4224F516CB73876C25933ADE8BA50 /* MMMarkdown-dummy.m in Sources */,
+				CD0F6D1C3473252A49F3A309A4A9DC8B /* MMMarkdown.m in Sources */,
+				5AA48FF6DD9B774A66E4907ABB401247 /* MMParser.m in Sources */,
+				F468C1B68596C4B35A7C09FCC794D61B /* MMScanner.m in Sources */,
+				DE66772AB1812B75B8BB0805488F0872 /* MMSpanParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
