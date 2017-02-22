@@ -8,7 +8,6 @@
 
 #import "BSGReachabilityNotifier.h"
 @import Reachability;
-@import RMessage;
 
 @interface BSGReachabilityNotifier()
 

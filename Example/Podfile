@@ -2,7 +2,6 @@ use_frameworks!
 
 target 'BSGUtilities' do
   pod "BSGUtilities", :path => "../"
-  pod "RMessage"
   pod "Reachability"
 
   target 'Tests' do
