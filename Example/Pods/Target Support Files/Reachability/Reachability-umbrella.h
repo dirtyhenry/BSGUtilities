@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "Reachability.h"
 
-FOUNDATION_EXPORT double Pods_BSGUtilitiesVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BSGUtilitiesVersionString[];
+FOUNDATION_EXPORT double ReachabilityVersionNumber;
+FOUNDATION_EXPORT const unsigned char ReachabilityVersionString[];
 
