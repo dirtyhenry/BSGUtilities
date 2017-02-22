@@ -38,16 +38,19 @@
     // Allocate a reachability object
     self.reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
 
+    // Create a weak reference to self to prevent a retain cycle
+    __weak typeof(self) weakSelf = self;
+
     // Set the blocks
     _reachability.reachableBlock = ^(Reachability* reach) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self showAlertViewController];
+            [weakSelf showAlertViewController];
         });
     };
 
     _reachability.unreachableBlock = ^(Reachability*reach) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self hideAlertViewController];
+            [weakSelf hideAlertViewController];
         });
     };
 
