@@ -33,7 +33,7 @@ end
 
 desc "Lint"
 task :lint do |t|
-  sh "pod lib lint"
+  sh "bundle exec pod lib lint --allow-warnings"
 end
 
 desc "Deploy in public repo"
