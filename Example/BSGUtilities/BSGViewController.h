@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BSGEntitiesTableViewController.h"
+@import BSGUtilities;
 
 @interface BSGViewController : UITableViewController<BSGEntitiesTableViewDelegate>
 

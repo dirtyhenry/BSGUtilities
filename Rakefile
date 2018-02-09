@@ -13,7 +13,7 @@ end
 
 desc "Open"
 task :open do |t|
-  sh "cd Example && bundle exec pod install && open \"BSGUtilities.xcworkspace\""
+  sh "open \"Example/BSGUtilities.xcworkspace\""
 end
 
 desc "Generate the documentation"
@@ -21,9 +21,19 @@ task :appledoc do |t|
   sh "/usr/local/bin/appledoc --verbose 2 --output ./doc --ignore .m --ignore _* --project-name #{project_name} --project-version #{project_version} --keep-undocumented-objects --keep-undocumented-members --project-company #{project_company} --company-id #{company_id} --no-repeat-first-par --no-create-docset --create-html --index-desc Pod/README.md Pod"
 end
 
+desc "Pod Install"
+task :pod_install do |t|
+  sh "bundle exec pod install --project-directory=Example"
+end
+
+desc "Pod Update"
+task :pod_update do |t|
+  sh "bundle exec pod update --project-directory=Example"
+end
+
 desc "Lint"
 task :lint do |t|
-  sh "pod lib lint"
+  sh "bundle exec pod lib lint --allow-warnings"
 end
 
 desc "Deploy in public repo"
