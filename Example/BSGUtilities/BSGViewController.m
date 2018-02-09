@@ -71,7 +71,7 @@
         destinationVC.model = model;
     } else if ([segue.identifier isEqualToString:@"WebURL"]) {
         BSGWebViewController *destinationVC = segue.destinationViewController;
-        destinationVC.urlString = @"http://bootstragram.com";
+        destinationVC.urlString = @"https://bootstragram.com";
     } else if ([segue.identifier isEqualToString:@"WebMarkdown"]) {
         BSGWebViewController *destinationVC = segue.destinationViewController;
         NSError *error = nil;

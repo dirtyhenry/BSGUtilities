@@ -13,11 +13,12 @@
 
 @property (strong, nonatomic) Reachability *reachability;
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic) CGFloat reachabilityStatusBarHeight;
 @property (nonatomic) CGRect referenceFrame;
 
 @property (strong, nonatomic) UIViewController *statusVC;
 @property (strong, nonatomic) UIViewController *contentVC;
+
+@property (strong, nonatomic) NSLayoutConstraint *reachabilityStatusBarHeightConstraint;
 
 @end
 
@@ -27,10 +28,13 @@
     self = [super init];
     if (self) {
         self.window = window;
-        self.reachabilityStatusBarHeight = 40.0;
         [self setup];
     }
     return self;
+}
+
+- (CGFloat)statusBarHeight {
+    return UIApplication.sharedApplication.statusBarFrame.size.height;
 }
 
 - (void)setup {
@@ -43,20 +47,20 @@
     // Set the blocks
     _reachability.reachableBlock = ^(Reachability* reach) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf showAlertViewController];
-        });
-    };
-
-    _reachability.unreachableBlock = ^(Reachability*reach) {
-        dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf hideAlertViewController];
         });
     };
 
-    // Start the notifier, which will cause the reachability object to retain itself!
-    [_reachability startNotifier];
+    _reachability.unreachableBlock = ^(Reachability* reach) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf showAlertViewController];
+        });
+    };
 
     [self changeRootViewController];
+
+    // Start the notifier, which will cause the reachability object to retain itself!
+    [_reachability startNotifier];
 }
 
 - (void)changeRootViewController {
@@ -65,9 +69,7 @@
 
     // Create the alert view controller
     UIViewController *alertViewController = [[UIViewController alloc] init];
-    UIView *myAlertView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, _referenceFrame.size.width, _reachabilityStatusBarHeight)];
-    myAlertView.backgroundColor = [UIColor orangeColor];
-    [alertViewController.view addSubview:myAlertView];
+    alertViewController.view.backgroundColor = [UIColor orangeColor];
 
     // Change the root view controller
     UIViewController *newRootController = [[UIViewController alloc] init];
@@ -88,24 +90,41 @@
     self.contentVC = oldRootController;
     self.statusVC = alertViewController;
 
+    self.contentVC.view.layer.borderColor = [UIColor orangeColor].CGColor;
+    self.contentVC.view.layer.borderWidth = 2.0;
+    self.statusVC.view.layer.borderColor = [UIColor blueColor].CGColor;
+    self.statusVC.view.layer.borderWidth = 2.0;
+
     // Resize views
-    alertViewController.view.frame = CGRectMake(0, 0, _referenceFrame.size.width, _reachabilityStatusBarHeight);
-    oldRootController.view.frame = CGRectMake(0, _reachabilityStatusBarHeight, _referenceFrame.size.width, _referenceFrame.size.height - _reachabilityStatusBarHeight);
+    self.reachabilityStatusBarHeightConstraint = [_statusVC.view.heightAnchor constraintEqualToConstant:self.statusBarHeight];
+    [NSLayoutConstraint activateConstraints:@[
+                                              [_statusVC.view.leadingAnchor constraintEqualToAnchor:newRootController.view.leadingAnchor],
+                                              [_statusVC.view.trailingAnchor constraintEqualToAnchor:newRootController.view.trailingAnchor],
+                                              [_statusVC.view.topAnchor constraintEqualToAnchor:newRootController.view.topAnchor],
+                                              _reachabilityStatusBarHeightConstraint
+                                              ]];
+
+    [NSLayoutConstraint activateConstraints:@[
+                                              [_contentVC.view.leadingAnchor constraintEqualToAnchor:newRootController.view.leadingAnchor],
+                                              [_contentVC.view.trailingAnchor constraintEqualToAnchor:newRootController.view.trailingAnchor],
+                                              [_contentVC.view.topAnchor constraintEqualToAnchor:_statusVC.view.bottomAnchor],
+                                              [_contentVC.view.bottomAnchor constraintEqualToAnchor:newRootController.bottomLayoutGuide.topAnchor]
+                                              ]];
 }
 
 - (void)hideAlertViewController {
     NSLog(@"hide");
+    _reachabilityStatusBarHeightConstraint.constant = self.statusBarHeight;
     [UIView animateWithDuration:0.300 animations:^{
-        self.statusVC.view.frame = CGRectMake(0, 0, _referenceFrame.size.width, 20.0);
-        self.contentVC.view.frame = CGRectMake(0, 20.0, _referenceFrame.size.width, _referenceFrame.size.height - 20.0);
+        [_window.rootViewController.view layoutIfNeeded];
     }];
 }
 
 - (void)showAlertViewController {
     NSLog(@"show");
+    _reachabilityStatusBarHeightConstraint.constant = 2.0 * self.statusBarHeight;
     [UIView animateWithDuration:0.300 animations:^{
-        self.statusVC.view.frame = CGRectMake(0, 0, _referenceFrame.size.width, _reachabilityStatusBarHeight);
-        self.contentVC.view.frame = CGRectMake(0, _reachabilityStatusBarHeight, _referenceFrame.size.width, _referenceFrame.size.height - _reachabilityStatusBarHeight);
+        [_window.rootViewController.view layoutIfNeeded];
     }];
 }
 
