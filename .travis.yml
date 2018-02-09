@@ -15,4 +15,5 @@ before_install:
 script:
   - set -o pipefail && xcodebuild -workspace Example/BSGUtilities.xcworkspace -scheme BSGUtilities -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' test | xcpretty
   - set -o pipefail && xcodebuild -workspace Example/BSGUtilities.xcworkspace -scheme BSGUtilities -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' test | xcpretty
+  - set -o pipefail && xcodebuild -workspace Example/BSGUtilities.xcworkspace -scheme BSGUtilities -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' test | xcpretty
   - pod lib lint --allow-warnings
