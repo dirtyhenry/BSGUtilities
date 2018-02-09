@@ -1,12 +1,14 @@
 # reference: http://www.objc.io/issue-6/travis-ci.html
 
-osx_image: xcode9
+os: osx
+osx_image: xcode9.2
+
 language: objective-c
 # before_install: cd Example && pod install && cd -
 podfile: Example/Podfile
 
 before_install:
-  - rvm use 2.3.1
+  - rvm use ruby-2.3.1
   - bundle install
   - bundle exec pod repo update
   - bundle exec pod install --project-directory=Example
