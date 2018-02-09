@@ -36,8 +36,8 @@ task :lint do |t|
   sh "bundle exec pod lib lint --allow-warnings"
 end
 
-desc "Deploy in public repo"
-task :deploy do |t|
+desc "Publish pod"
+task :pod_publish do |t|
   # The version branch should be available on the remote before running this
-  sh "pod repo push bootstragram-public-pod-repo BSGUtilities.podspec"
+  sh "bundle exec pod trunk push BSGUtilities.podspec --allow-warnings"
 end
