@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
-  s.version          = "0.4.2"
+  s.version          = "0.5.0"
   s.summary          = "Bootstragram iOS Utilities Pod"
   s.description      = <<-DESC
                        Bootstragram iOS Utilities Pod
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/Bootstragram/BSGUtilities.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/bootstragram'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

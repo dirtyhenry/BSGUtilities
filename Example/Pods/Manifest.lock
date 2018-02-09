@@ -1,5 +1,5 @@
 PODS:
-  - BSGUtilities (0.4.2):
+  - BSGUtilities (0.5.0):
     - MMMarkdown (~> 0.3)
   - MMMarkdown (0.5.5)
   - Reachability (3.2)
@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BSGUtilities: 1f7d06b746473773b31f0cdb800c434985dab38c
+  BSGUtilities: 12c57a446a9d2c29bface7a959be06ebf6478628
   MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: 2ac6f368fe473c8d96c75936c4ecc39a3920e5b4
+PODFILE CHECKSUM: 86354a2dbc46b8b1f87c220e11876059f93a6384
 
 COCOAPODS: 1.4.0

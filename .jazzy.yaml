@@ -1,0 +1,16 @@
+objc: true
+clean: true
+author: Bootstragram
+author_url: https://bootstragram.com
+github_url: https://github.com/FlaneurApp/FlaneurOpen
+xcodebuild-arguments: --objc
+module: BSGUtilities
+podspec: BSGUtilities.podspec
+output: docs
+
+# Uncomment the following to get Objective-C documentation
+# Jazzy does not support documenting Swift AND Objective-C yet
+# objc: true
+# sdk: iphoneos
+# umbrella_header: Tripper/CustomViews/Common/Flaneur-Bridging-Header.h
+# framework_root: Tripper
