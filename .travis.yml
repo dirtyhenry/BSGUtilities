@@ -1,8 +1,8 @@
-# reference: http://www.objc.io/issue-6/travis-ci.html
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
 
-os: osx
 osx_image: xcode9.2
-
 language: objective-c
 # before_install: cd Example && pod install && cd -
 podfile: Example/Podfile
@@ -11,6 +11,7 @@ before_install:
   - bundle install
   - bundle exec pod repo update
   - bundle exec pod install --project-directory=Example
+  - instruments -s devices
 
 script:
   - set -o pipefail && xcodebuild -workspace Example/BSGUtilities.xcworkspace -scheme BSGUtilities -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' test | xcpretty
