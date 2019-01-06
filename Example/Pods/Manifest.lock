@@ -8,9 +8,14 @@ DEPENDENCIES:
   - BSGUtilities (from `../`)
   - Reachability
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MMMarkdown
+    - Reachability
+
 EXTERNAL SOURCES:
   BSGUtilities:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   BSGUtilities: 12c57a446a9d2c29bface7a959be06ebf6478628
@@ -19,4 +24,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 86354a2dbc46b8b1f87c220e11876059f93a6384
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
