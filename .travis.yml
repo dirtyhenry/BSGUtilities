@@ -2,13 +2,10 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode9.2
+osx_image: xcode10.2
 language: objective-c
-# before_install: cd Example && pod install && cd -
-podfile: Example/Podfile
 
-before_install:
-  - make install
+before_script:
   - instruments -s devices
 
 script:
