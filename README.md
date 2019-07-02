@@ -1,40 +1,49 @@
 # BSGUtilities
 
 [![CI Status](http://img.shields.io/travis/Bootstragram/BSGUtilities.svg?style=flat)](https://travis-ci.org/Bootstragram/BSGUtilities)
-[![Version](https://img.shields.io/cocoapods/v/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
-[![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
-[![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/docsets/BSGUtilities)
+[![Version](https://img.shields.io/cocoapods/v/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
+[![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
+[![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
 
-## Reminders
-
-Validate the pod:
-
-    pod lib lint # from the **root**
-
-Publish the pod to the repo:
-
-    pod repo push bootstragram-public-pod-repo BSGUtilities.podspec
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+BSGUtilities is both a playground to play around some iOS concept and a CocoaPod with utilities. For more details about what it contains, please visit the website.
 
 ## Installation
 
-BSGUtilities is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+```
+pod 'BSGUtilities'
+```
 
-    pod "BSGUtilities"
+## Usage
 
-## Author
+Please refer to the website for details about usage.
 
-Bootstragram, contact@bootstragram.com
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Development
+
+Install dependencies:
+
+    make install
+
+Validate the pod:
+
+    make lint
+
+Generate the docs:
+
+    make docs
+
+Publish the pod to the repo:
+
+    make publish
 
 ## License
 
-BSGUtilities is available under the MIT license. See the LICENSE file for more info.
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## How-Tos
 
