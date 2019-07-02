@@ -334,7 +334,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BSGUtilities/BSGUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MMMarkdown/MMMarkdown.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
@@ -347,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A47E21A83FF4C1B500C758AF /* [CP] Check Pods Manifest.lock */ = {
