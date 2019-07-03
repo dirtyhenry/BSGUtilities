@@ -7,11 +7,11 @@
 //
 
 #import "BSGAppDelegate.h"
-#import "BSGReachabilityNotifier.h"
+#import "BSGUtilities-Swift.h"
 
 @interface BSGAppDelegate()
 
-@property(strong, nonatomic) BSGReachabilityNotifier *reachabilityNotifier;
+@property(strong, nonatomic) ReachabilityNotifier *reachabilityNotifier;
 @end
 
 @implementation BSGAppDelegate
@@ -19,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    self.reachabilityNotifier = [[BSGReachabilityNotifier alloc] initWithWindow:self.window];
+    self.reachabilityNotifier = [[ReachabilityNotifier alloc] initWithWindow:self.window
+                                                                    hostName:@"www.google.com"];
+    [self.reachabilityNotifier start];
 
     return YES;
 }

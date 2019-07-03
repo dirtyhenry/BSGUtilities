@@ -130,13 +130,13 @@
 		2D7C9CAC53EEB39F09443A8ECD4E9C9E /* BSGEntitiesTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSGEntitiesTableViewController.m; sourceTree = "<group>"; };
 		2DD8D35708C3C6EBB0DCF4752CA1A1BC /* MMMarkdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMMarkdown.h; path = Source/MMMarkdown.h; sourceTree = "<group>"; };
 		30C8865922677D6532E9144AAF4057C8 /* MMMarkdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMMarkdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B3BCFA31CB8198DA21E70C91BD0E517 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; path = index.html; sourceTree = "<group>"; };
+		3B3BCFA31CB8198DA21E70C91BD0E517 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		3C298B3C67DE45708E31C945F65A0E85 /* BSGManagedObjectsTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSGManagedObjectsTableViewController.h; sourceTree = "<group>"; };
 		3D0D374038EE8296B2E5E2643B0BD94E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		466D7203B19A18E69354D66E1CCFA322 /* BSGFileSystemExplorer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSGFileSystemExplorer.h; sourceTree = "<group>"; };
 		49F1EA129B802B1563520B25C870ADB7 /* BSGFetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSGFetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
-		4B1C9EDA6702031861FBA39FFD985A6E /* normalize.css */ = {isa = PBXFileReference; includeInIndex = 1; path = normalize.css; sourceTree = "<group>"; };
+		4B1C9EDA6702031861FBA39FFD985A6E /* normalize.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; path = normalize.css; sourceTree = "<group>"; };
 		4DDAC241B01CE4444BDE96E92810654F /* BSGEntitiesTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSGEntitiesTableViewController.h; sourceTree = "<group>"; };
 		4E275377959576AB9F8D3A11FBE613E7 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
 		52CD3247BCD006D161FBCE99695E2B94 /* MMMarkdown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-prefix.pch"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		6F44C6B1E26C148922C597A78248FE91 /* BSGMultiSectionsArrayDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSGMultiSectionsArrayDataSource.h; sourceTree = "<group>"; };
 		70A32E04F1E62F6291E18D6CADD701D1 /* NSDictionary+BSGJSONUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BSGJSONUtils.m"; path = "Pod/Classes/NSDictionary+BSGJSONUtils.m"; sourceTree = "<group>"; };
 		728150AC474F5D2A9BBCF0F6426E22B9 /* MMMarkdown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMMarkdown-dummy.m"; sourceTree = "<group>"; };
-		754D7109B66E1597818B4278C6CBA7E9 /* Pods_BSGUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BSGUtilities.framework; path = "Pods-BSGUtilities.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		754D7109B66E1597818B4278C6CBA7E9 /* Pods_BSGUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSGUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4CDE4C3053EF7750FE171F5566B8F /* Pods-BSGUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BSGUtilities-umbrella.h"; sourceTree = "<group>"; };
 		796FFDB72C684DEEC7AF3BDA1EF8D117 /* BSGWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSGWebViewController.m; sourceTree = "<group>"; };
 		7B9021092D6C02D401B4614EC068C327 /* Pods-BSGUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BSGUtilities-dummy.m"; sourceTree = "<group>"; };
@@ -162,14 +162,14 @@
 		919B6413D394ECA90AF19451BA7F80A6 /* BSGUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BSGUtilities.modulemap; sourceTree = "<group>"; };
 		931A6C37D98F9BF005E369DF0E552013 /* MMSpanParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMSpanParser.h; path = Source/MMSpanParser.h; sourceTree = "<group>"; };
 		95AB1C4064FC8FE5A01E2EE6256FD769 /* BSGWebViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSGWebViewDelegate.h; sourceTree = "<group>"; };
-		980D81928D01BCF79002940DBD11D251 /* MMMarkdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MMMarkdown.framework; path = MMMarkdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980D81928D01BCF79002940DBD11D251 /* MMMarkdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMMarkdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9897E2794D005EF936135A112224F8DD /* Pods-Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-Info.plist"; sourceTree = "<group>"; };
 		9AA59D14EC9F2DCF23A21A0F02E4CA16 /* MMSpanParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMSpanParser.m; path = Source/MMSpanParser.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FDEFACAB9AB28A07EC68FC0011FD534 /* BSGUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BSGUtilities.framework; path = BSGUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FDEFACAB9AB28A07EC68FC0011FD534 /* BSGUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BSGUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06CC260B553A5B921F97CD53E26CCFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A329D83B01D32ACA606BDC75C5969C61 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A85953BD896191CA2DDB7D470538BD08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A85953BD896191CA2DDB7D470538BD08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AEBF346E4766F0B68DD669DA2628619E /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B2EDF15E938B2899F4140690A9C20C2E /* MMDocument_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument_Private.h; path = Source/MMDocument_Private.h; sourceTree = "<group>"; };
 		B58F51395FB9544D1BEEEA8C29A63D6C /* Pods-BSGUtilities-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BSGUtilities-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 		D240B41A8CD7AB91EDC5B8AD736373BD /* NSDictionary+BSGJSONUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSGJSONUtils.h"; path = "Pod/Classes/NSDictionary+BSGJSONUtils.h"; sourceTree = "<group>"; };
 		D3208469F26097BFC95020C332B865FC /* BSGUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSGUtilities-prefix.pch"; sourceTree = "<group>"; };
 		D61C60A18DA5C318CDAAC0B28F365B49 /* MMMarkdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMMarkdown.m; path = Source/MMMarkdown.m; sourceTree = "<group>"; };
-		D8D474897B0DEC34FC8D808C6379F237 /* BSGUtilities.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BSGUtilities.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DBB287707FCBA6DDD71027095E378D44 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D8D474897B0DEC34FC8D808C6379F237 /* BSGUtilities.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BSGUtilities.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DBB287707FCBA6DDD71027095E378D44 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E087DEA121DEDCAFAD99D35C58D2CC6E /* Reachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-prefix.pch"; sourceTree = "<group>"; };
 		E2C17D70C317ABADDF08DCA5EF168CFF /* MMDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument.h; path = Source/MMDocument.h; sourceTree = "<group>"; };
 		E2D7C88ADC1BB3A31E595E240375044E /* MMParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMParser.m; path = Source/MMParser.m; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		ED9822C2188988FC3A5CBDA35CB4686F /* BSGMultiSectionsArrayDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSGMultiSectionsArrayDataSource.m; sourceTree = "<group>"; };
 		F5386F8E5B8D54D4B3549D6117457C15 /* Reachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Reachability.modulemap; sourceTree = "<group>"; };
 		FC5F8EB25F12571BEE49E32707A58D89 /* MMScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMScanner.m; path = Source/MMScanner.m; sourceTree = "<group>"; };
-		FC95D668E217CFBB25845AA15162348B /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC95D668E217CFBB25845AA15162348B /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD044869AB6AF2D125CA5E450E708F45 /* BSGManagedObjectDetailTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSGManagedObjectDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,7 +282,6 @@
 				1871C077A636B64885329ACCC772EB9E /* Reachability.m */,
 				12830FF7BA73448024E7E8A8B129717A /* Support Files */,
 			);
-			name = Reachability;
 			path = Reachability;
 			sourceTree = "<group>";
 		};
@@ -381,7 +380,6 @@
 				9AA59D14EC9F2DCF23A21A0F02E4CA16 /* MMSpanParser.m */,
 				AC9539E6CB5B5EC3442859712CC54335 /* Support Files */,
 			);
-			name = MMMarkdown;
 			path = MMMarkdown;
 			sourceTree = "<group>";
 		};
@@ -698,7 +696,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -873,7 +871,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MMMarkdown/MMMarkdown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
 				PRODUCT_MODULE_NAME = MMMarkdown;
@@ -903,7 +901,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities.modulemap";
@@ -936,7 +934,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BSGUtilities/Pods-BSGUtilities.modulemap";
@@ -980,6 +978,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1002,13 +1001,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1040,6 +1038,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1065,7 +1064,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1094,7 +1093,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
 				PRODUCT_MODULE_NAME = BSGUtilities;
@@ -1125,7 +1124,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
@@ -1156,7 +1155,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
@@ -1186,7 +1185,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
 				PRODUCT_MODULE_NAME = BSGUtilities;
@@ -1216,7 +1215,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Pods-Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
@@ -1249,7 +1248,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MMMarkdown/MMMarkdown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
 				PRODUCT_MODULE_NAME = MMMarkdown;
@@ -1280,7 +1279,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Pods-Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
