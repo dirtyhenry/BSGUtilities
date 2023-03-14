@@ -17,8 +17,13 @@
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "resources": ["Pod/Assets/html/*.html", "Pod/Assets/css/*.css"],
+  "resources": [
+    "Pod/Assets/html/*.html",
+    "Pod/Assets/css/*.css"
+  ],
   "dependencies": {
-    "MMMarkdown": ["~> 0.3"]
+    "MMMarkdown": [
+      "~> 0.3"
+    ]
   }
 }
