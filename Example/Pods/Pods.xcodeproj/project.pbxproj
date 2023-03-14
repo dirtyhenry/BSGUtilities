@@ -1016,65 +1016,6 @@
 			};
 			name = Release;
 		};
-		578051CCFDBD380FBE0483BB2451EA2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB0FBD305BA76E65AA6317E4F4756C1D /* BSGUtilities.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
-				PRODUCT_MODULE_NAME = BSGUtilities;
-				PRODUCT_NAME = BSGUtilities;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		588AE5727DAC146FC553B3C2356B0451 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B91D6EE60B74ECDB1DBF12962B2E6EEF /* BSGUtilities.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
-				PRODUCT_MODULE_NAME = BSGUtilities;
-				PRODUCT_NAME = BSGUtilities;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		71051B2765E8BF62FF8AD36F06B67B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9CF2FAE669D675BCB36548C3EED5A17 /* MMMarkdown.debug.xcconfig */;
@@ -1095,6 +1036,36 @@
 				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
 				PRODUCT_MODULE_NAME = MMMarkdown;
 				PRODUCT_NAME = MMMarkdown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80E109DAF7E9AF2420409E8999B53CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91D6EE60B74ECDB1DBF12962B2E6EEF /* BSGUtilities.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
+				PRODUCT_MODULE_NAME = BSGUtilities;
+				PRODUCT_NAME = BSGUtilities;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1287,14 +1258,45 @@
 			};
 			name = Debug;
 		};
+		FAE5C25AC52251F24E322C83147B9436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB0FBD305BA76E65AA6317E4F4756C1D /* BSGUtilities.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BSGUtilities/BSGUtilities-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BSGUtilities/BSGUtilities-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BSGUtilities/BSGUtilities.modulemap";
+				PRODUCT_MODULE_NAME = BSGUtilities;
+				PRODUCT_NAME = BSGUtilities;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		1432F4DB12F6EC5528E14E26AF922972 /* Build configuration list for PBXNativeTarget "BSGUtilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				588AE5727DAC146FC553B3C2356B0451 /* Debug */,
-				578051CCFDBD380FBE0483BB2451EA2A /* Release */,
+				80E109DAF7E9AF2420409E8999B53CFE /* Debug */,
+				FAE5C25AC52251F24E322C83147B9436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

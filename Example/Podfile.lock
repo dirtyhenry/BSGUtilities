@@ -1,6 +1,6 @@
 PODS:
   - BSGUtilities (0.5.0):
-    - MMMarkdown (~> 0.3)
+    - MMMarkdown (~> 0.5.5)
   - MMMarkdown (0.5.5)
   - Reachability (3.2)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BSGUtilities: fdf29d814e271963c2649e802d3c9b07689014a9
+  BSGUtilities: 19f6f6875b4f4d1acb05829c05afba98cdc432a2
   MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
