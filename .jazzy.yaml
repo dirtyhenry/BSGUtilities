@@ -1,9 +1,0 @@
-objc: true
-clean: true
-author: Mick F
-author_url: https://bootstragram.com
-github_url: https://github.com/dirtyhenry/BSGUtilities
-xcodebuild-arguments: --objc
-module: BSGUtilities
-podspec: BSGUtilities.podspec
-output: docs
