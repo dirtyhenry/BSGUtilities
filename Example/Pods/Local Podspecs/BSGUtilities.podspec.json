@@ -6,25 +6,19 @@
   "homepage": "https://github.com/dirtyhenry/BSGUtilities",
   "license": "MIT",
   "authors": {
-    "Bootstragram": "contact@bootstragram.com"
+    "Mick F": "contact@bootstragram.com"
   },
   "source": {
-    "git": "https://github.com/Bootstragram/BSGUtilities.git",
+    "git": "https://github.com/dirtyhenry/BSGUtilities.git",
     "tag": "0.5.0"
   },
-  "social_media_url": "https://twitter.com/bootstragram",
   "platforms": {
     "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "resources": [
-    "Pod/Assets/html/*.html",
-    "Pod/Assets/css/*.css"
-  ],
+  "resources": ["Pod/Assets/html/*.html", "Pod/Assets/css/*.css"],
   "dependencies": {
-    "MMMarkdown": [
-      "~> 0.3"
-    ]
+    "MMMarkdown": ["~> 0.3"]
   }
 }

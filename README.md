@@ -1,6 +1,5 @@
 # BSGUtilities
 
-[![CI Status](http://img.shields.io/travis/Bootstragram/BSGUtilities.svg?style=flat)](https://travis-ci.org/Bootstragram/BSGUtilities)
 [![Version](https://img.shields.io/cocoapods/v/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
 [![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
 [![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
@@ -53,9 +52,9 @@ The easisest way to install the Core Data debug views is via the Storyboard.
 
 Create 3 table view controllers, with the following class names, table view cell identifier and segue identifiers:
 
-1. `BSGEntitiesTableViewController` should use cells with *Right Detail* style, `BSGEntitiesViewControllerCell`
-   cell identifier and *Disclosure Indicator* accessory using a `BSGManagedObjectsTableViewController` segue.
-2. `BSGManagedObjectsTableViewController` should use cells with *Right Detail* style, `BSGManagedObjectsViewControllerCell`
-   cell identifier and *Disclosure Indicator* accessory using a `BSGManagedObjectDetailTableViewController` segue.
-3. `BSGManagedObjectDetailTableViewController` should use cells with *Left Detail* style, `BSGManagedObjectDetailViewControllerCell`
+1. `BSGEntitiesTableViewController` should use cells with _Right Detail_ style, `BSGEntitiesViewControllerCell`
+   cell identifier and _Disclosure Indicator_ accessory using a `BSGManagedObjectsTableViewController` segue.
+2. `BSGManagedObjectsTableViewController` should use cells with _Right Detail_ style, `BSGManagedObjectsViewControllerCell`
+   cell identifier and _Disclosure Indicator_ accessory using a `BSGManagedObjectDetailTableViewController` segue.
+3. `BSGManagedObjectDetailTableViewController` should use cells with _Left Detail_ style, `BSGManagedObjectDetailViewControllerCell`
    cell identifier

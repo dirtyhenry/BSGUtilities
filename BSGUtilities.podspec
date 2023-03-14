@@ -20,9 +20,8 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/dirtyhenry/BSGUtilities"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Bootstragram" => "contact@bootstragram.com" }
-  s.source           = { :git => "https://github.com/Bootstragram/BSGUtilities.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/bootstragram'
+  s.author           = { "Mick F" => "contact@bootstragram.com" }
+  s.source           = { :git => "https://github.com/dirtyhenry/BSGUtilities.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
