@@ -11,5 +11,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 This was the latest release when we started this CHANGELOG.
 
-[Unreleased]: https://github.com/Bootstragram/BSGUtilities/compare/0.5.0...HEAD
-[0.5.0]: https://github.com/Bootstragram/BSGUtilities/compare/0.4.2...0.5.0
+[unreleased]: https://github.com/dirtyhenry/BSGUtilities/compare/0.5.0...HEAD
+[0.5.0]: https://github.com/dirtyhenry/BSGUtilities/compare/0.4.2...0.5.0
