@@ -32,10 +32,6 @@ Validate the pod:
 
     make lint
 
-Generate the docs:
-
-    make docs
-
 Publish the pod to the repo:
 
     make publish
