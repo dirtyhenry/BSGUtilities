@@ -21,6 +21,9 @@
 
     self.reachabilityNotifier = [[BSGReachabilityNotifier alloc] initWithWindow:self.window];
 
+    // A little pause to have time to see the launch screen
+    [NSThread sleepForTimeInterval:0.500];
+    
     return YES;
 }
 							
