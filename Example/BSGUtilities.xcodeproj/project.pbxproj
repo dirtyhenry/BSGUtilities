@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002A9E992AA7902B008F71E6 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A9E982AA7902B008F71E6 /* Launch.storyboard */; };
 		003EA1E11E574BBE00BFC80E /* BSGReachabilityNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */; };
 		008E354B1B8DCC3500885C44 /* BSGArrayDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 008E354A1B8DCC3500885C44 /* BSGArrayDataSourceTests.m */; };
 		00C7245B1A03DA6200145ECC /* SampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00C724591A03DA6200145ECC /* SampleModel.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002A9E982AA7902B008F71E6 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		003EA1DF1E574BBE00BFC80E /* BSGReachabilityNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGReachabilityNotifier.h; sourceTree = "<group>"; };
 		003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGReachabilityNotifier.m; sourceTree = "<group>"; };
 		008E354A1B8DCC3500885C44 /* BSGArrayDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGArrayDataSourceTests.m; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				00F706A11CF748A1000B5DE0 /* BSGMultiSectionsTableViewController.m */,
 				003EA1DF1E574BBE00BFC80E /* BSGReachabilityNotifier.h */,
 				003EA1E01E574BBE00BFC80E /* BSGReachabilityNotifier.m */,
+				002A9E982AA7902B008F71E6 /* Launch.storyboard */,
 			);
 			path = BSGUtilities;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				002A9E992AA7902B008F71E6 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +572,6 @@
 			baseConfigurationReference = 914747D5D1933BE7B6818EBC /* Pods-BSGUtilities.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -586,7 +589,6 @@
 			baseConfigurationReference = 9FA6D2B322647CE47658CCAB /* Pods-BSGUtilities.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

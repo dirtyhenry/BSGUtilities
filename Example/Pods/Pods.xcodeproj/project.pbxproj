@@ -902,7 +902,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
@@ -1036,7 +1036,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MMMarkdown/MMMarkdown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
 				PRODUCT_MODULE_NAME = MMMarkdown;
@@ -1227,7 +1227,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MMMarkdown/MMMarkdown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
 				PRODUCT_MODULE_NAME = MMMarkdown;
@@ -1257,7 +1257,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;

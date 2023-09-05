@@ -108,7 +108,7 @@
                                               [_contentVC.view.leadingAnchor constraintEqualToAnchor:newRootController.view.leadingAnchor],
                                               [_contentVC.view.trailingAnchor constraintEqualToAnchor:newRootController.view.trailingAnchor],
                                               [_contentVC.view.topAnchor constraintEqualToAnchor:_statusVC.view.bottomAnchor],
-                                              [_contentVC.view.bottomAnchor constraintEqualToAnchor:newRootController.bottomLayoutGuide.topAnchor]
+                                              [_contentVC.view.bottomAnchor constraintEqualToAnchor:newRootController.view.safeAreaLayoutGuide.bottomAnchor]
                                               ]];
 }
 
@@ -116,7 +116,7 @@
     NSLog(@"hide");
     _reachabilityStatusBarHeightConstraint.constant = self.statusBarHeight;
     [UIView animateWithDuration:0.300 animations:^{
-        [_window.rootViewController.view layoutIfNeeded];
+        [self->_window.rootViewController.view layoutIfNeeded];
     }];
 }
 
@@ -124,7 +124,7 @@
     NSLog(@"show");
     _reachabilityStatusBarHeightConstraint.constant = 2.0 * self.statusBarHeight;
     [UIView animateWithDuration:0.300 animations:^{
-        [_window.rootViewController.view layoutIfNeeded];
+        [self->_window.rootViewController.view layoutIfNeeded];
     }];
 }
 
