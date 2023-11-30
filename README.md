@@ -4,7 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
 [![Platform](https://img.shields.io/cocoapods/p/BSGUtilities.svg?style=flat)](http://cocoadocs.org/pods/BSGUtilities)
 
-> [!TIP] BSGUtilities is being deprecated, and its code is slowly moving to
+> [!TIP]  
+> BSGUtilities is being deprecated, and its code is slowly moving to
 > [swift-blocks][1]'s ObjectiveBlocks target.
 
 BSGUtilities is both a playground to play around some iOS concept and a CocoaPod
