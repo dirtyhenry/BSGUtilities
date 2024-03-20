@@ -1,7 +1,5 @@
 PODS:
-  - BSGUtilities (0.5.0):
-    - MMMarkdown (~> 0.5.5)
-  - MMMarkdown (0.5.5)
+  - BSGUtilities (0.5.0)
   - Reachability (3.2)
 
 DEPENDENCIES:
@@ -10,7 +8,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - MMMarkdown
     - Reachability
 
 EXTERNAL SOURCES:
@@ -18,8 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BSGUtilities: 9884decdd37517d98ac90a29151c2f66a3f1b84c
-  MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
+  BSGUtilities: 6555adb53ab123deaf3a7715c91e60f4bc1e7280
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 PODFILE CHECKSUM: c1b4d45c8c85ef59089e76eb4b8bcc68ddceea57
