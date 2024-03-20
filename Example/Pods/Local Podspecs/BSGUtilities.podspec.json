@@ -20,10 +20,5 @@
   "resources": [
     "Pod/Assets/html/*.html",
     "Pod/Assets/css/*.css"
-  ],
-  "dependencies": {
-    "MMMarkdown": [
-      "~> 0.5.5"
-    ]
-  }
+  ]
 }

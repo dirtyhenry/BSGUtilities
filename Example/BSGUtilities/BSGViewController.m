@@ -72,15 +72,15 @@
     } else if ([segue.identifier isEqualToString:@"WebURL"]) {
         BSGWebViewController *destinationVC = segue.destinationViewController;
         destinationVC.urlString = @"https://bootstragram.com";
-    } else if ([segue.identifier isEqualToString:@"WebMarkdown"]) {
-        BSGWebViewController *destinationVC = segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"WebText"]) {
         NSError *error = nil;
         NSString *mdFilePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"md"];
         NSString *rawMarkdown = [NSString stringWithContentsOfFile:mdFilePath encoding:NSUTF8StringEncoding error:&error];
         if (error) {
             NSLog(@"Error: %@", error);
         }
-        destinationVC.rawMarkdownContent = rawMarkdown;
+        BSGWebViewController *destinationVC = segue.destinationViewController;
+        destinationVC.rawText = rawMarkdown;
     } else if ([segue.identifier isEqualToString:@"CoreDataDemo"]) {
         BSGCoreDataDemoViewController *destinationVC = segue.destinationViewController;
         destinationVC.managedObjectContext = self.managedObjectContext;
