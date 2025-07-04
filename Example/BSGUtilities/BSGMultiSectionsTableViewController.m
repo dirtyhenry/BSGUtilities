@@ -1,11 +1,3 @@
-//
-//  BSGMultiSectionsTableViewController.m
-//  BSGUtilities
-//
-//  Created by Mickaël Floc'hlay on 26/05/2016.
-//  Copyright © 2016 Mickaël Floc'hlay. All rights reserved.
-//
-
 #import "BSGMultiSectionsTableViewController.h"
 @import BSGUtilities;
 

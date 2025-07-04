@@ -10,9 +10,9 @@
 Pod::Spec.new do |s|
   s.name             = "BSGUtilities"
   s.version          = "0.5.0"
-  s.summary          = "Bootstragram iOS Utilities Pod"
+  s.summary          = "Mick F iOS Utilities Pod"
   s.description      = <<-DESC
-                       Bootstragram iOS Utilities Pod
+                       Mick F iOS Utilities Pod
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/dirtyhenry/BSGUtilities"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Mick F" => "contact@bootstragram.com" }
+  s.author           = { "Mick F" => "contact@mickf.net" }
   s.source           = { :git => "https://github.com/dirtyhenry/BSGUtilities.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '12.0'

@@ -1,11 +1,3 @@
-//
-//  BSGViewController.m
-//  BSGUtilities
-//
-//  Created by Mickaël Floc'hlay on 10/30/2014.
-//  Copyright (c) 2014 Mickaël Floc'hlay. All rights reserved.
-//
-
 #import "BSGViewController.h"
 #import <CoreData/CoreData.h>
 #import "BSGWebViewController.h"
@@ -71,7 +63,7 @@
         destinationVC.model = model;
     } else if ([segue.identifier isEqualToString:@"WebURL"]) {
         BSGWebViewController *destinationVC = segue.destinationViewController;
-        destinationVC.urlString = @"https://bootstragram.com";
+        destinationVC.urlString = @"https://mickf.net";
     } else if ([segue.identifier isEqualToString:@"WebText"]) {
         NSError *error = nil;
         NSString *mdFilePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"md"];

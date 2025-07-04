@@ -1,11 +1,3 @@
-//
-//  BSGUtilitiesTests.m
-//  BSGUtilitiesTests
-//
-//  Created by Mickaël Floc'hlay on 10/30/2014.
-//  Copyright (c) 2014 Mickaël Floc'hlay. All rights reserved.
-//
-
 //SpecBegin(InitialSpecs)
 
 /*

@@ -1,11 +1,3 @@
-//
-//  BSGCoreDataDemoViewController.m
-//  BSGUtilities
-//
-//  Created by Mickaël Floc'hlay on 25/08/2015.
-//  Copyright (c) 2015 Mickaël Floc'hlay. All rights reserved.
-//
-
 #import "BSGCoreDataDemoViewController.h"
 @import BSGUtilities;
 

@@ -1,11 +1,3 @@
-//
-//  BSGArrayDataSourceTests.m
-//  BSGUtilities
-//
-//  Created by Mickaël Floc'hlay on 26/08/2015.
-//  Copyright (c) 2015 Mickaël Floc'hlay. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 @import BSGUtilities;
