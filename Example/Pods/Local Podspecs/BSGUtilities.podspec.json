@@ -1,6 +1,6 @@
 {
   "name": "BSGUtilities",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "summary": "Mick F iOS Utilities Pod",
   "description": "Mick F iOS Utilities Pod\n\n* Markdown format.\n* Don't worry about the indent, we strip it!",
   "homepage": "https://github.com/dirtyhenry/BSGUtilities",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/dirtyhenry/BSGUtilities.git",
-    "tag": "0.5.0"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "12.0"

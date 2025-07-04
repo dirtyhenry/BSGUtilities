@@ -1,5 +1,5 @@
 PODS:
-  - BSGUtilities (0.5.0)
+  - BSGUtilities (0.6.0)
   - Reachability (3.2)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BSGUtilities: 388655f54960b8da56d71ebcafbc068571c25ea8
+  BSGUtilities: 70117044ad2dade6395afd3dd74dbdd035b9ec79
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 PODFILE CHECKSUM: c1b4d45c8c85ef59089e76eb4b8bcc68ddceea57
